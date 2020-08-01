@@ -1,6 +1,7 @@
 <h1 align="center">Hi 👋, I'm Herdi Tr</h1>
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
+<hr />
 - 🔭 I’m currently working on [Cognitive.ID](https://cognitive.id)
 
 - 🌱 I’m currently learning **Meteor.js, React Native**
