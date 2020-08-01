@@ -1,22 +1,20 @@
 <h1 align="center">Hi 👋, I'm Herdi Tr</h1>
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
-<hr />
+<br />
 
-- 🔭 - I’m currently working on [Cognitive.ID](https://cognitive.id)
+- 🔭 I’m currently working on [Cognitive.ID](https://cognitive.id)
 
-- 🌱 - I’m currently learning **Meteor.js, React Native**
+- 🌱 I’m currently learning **Meteor.js, React Native**
 
-- 💻 - All of my projects are available at [https://hrdtr.cognitive.id](https://hrdtr.cognitive.id)
+- 💻 All of my projects are available at [https://hrdtr.cognitive.id](https://hrdtr.cognitive.id)
 
-- 📝 - I regulary write articles on [https://blog.cognitive.id](https://blog.cognitive.id)
+- 💬 Ask me about **Express, Firebase, Hapi, Nuxt, Vue, React, Cordova, Electron**
 
-- 💬 - Ask me about **Express, Firebase, Hapi, Nuxt, Vue, React, Cordova, Electron**
+- 📫 Reach me on **hrdtr@cognitive.id**
 
-- 📫 - Reach me on **hrdtr@cognitive.id**
-
-- ⚡ - Fun fact: **I love lock-down,**
-<hr />
+- ⚡ Fun fact: **I love lock-down,**
+<br />
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=hrdtr" alt="hrdtr" /> </p>
 
