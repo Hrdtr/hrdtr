@@ -2,19 +2,20 @@
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
 <hr />
-- 🔭 I’m currently working on [Cognitive.ID](https://cognitive.id)
 
-- 🌱 I’m currently learning **Meteor.js, React Native**
+- 🔭  I’m currently working on [Cognitive.ID](https://cognitive.id)
 
-- 👨‍💻 All of my projects are available at [https://hrdtr.cognitive.id](https://hrdtr.cognitive.id)
+- 🌱  I’m currently learning **Meteor.js, React Native**
 
-- 📝 I regulary write articles on [https://blog.cognitive.id](https://blog.cognitive.id)
+- 👨‍ 💻 All of my projects are available at [https://hrdtr.cognitive.id](https://hrdtr.cognitive.id)
 
-- 💬 Ask me about **Express, Firebase, Hapi, Nuxt, Vue, React, Cordova, Electron**
+- 📝  I regulary write articles on [https://blog.cognitive.id](https://blog.cognitive.id)
 
-- 📫 How to reach me **hrdtr@cognitive.id**
+- 💬  Ask me about **Express, Firebase, Hapi, Nuxt, Vue, React, Cordova, Electron**
 
-- ⚡ Fun fact **Loving lock-down,**
+- 📫  Reach me on **hrdtr@cognitive.id**
+
+- ⚡  Fun fact: **I love lock-down,**
 <hr />
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=hrdtr" alt="hrdtr" /> </p>
