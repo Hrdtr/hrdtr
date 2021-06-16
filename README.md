@@ -3,7 +3,7 @@
 
 <br />
 
-- 🔭 I’m currently working as CTO in [Apurva Digital](https://www.apurvadigital.com)
+- 🔭 I’m currently looking for a job
 
 - 🌱 I’m currently learning **Meteor.js, React Native**
 
