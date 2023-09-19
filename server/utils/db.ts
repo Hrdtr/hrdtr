@@ -6,7 +6,6 @@ import {
 } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 import { migrate } from "drizzle-orm/neon-http/migrator";
-import { WebSocket } from "undici";
 import * as schema from "../db/schema";
 
 const runtimeConfig = useRuntimeConfig();
@@ -19,8 +18,12 @@ if (!sql) {
 
 let pool: undefined | Pool = undefined;
 if (!pool) {
-  neonConfig.webSocketConstructor = WebSocket;
   pool = new Pool({ connectionString: runtimeConfig.databaseUrl });
+  if (process.dev) {
+    import("undici").then(({ WebSocket }) => {
+      neonConfig.webSocketConstructor = WebSocket;
+    });
+  }
 }
 
 const client = drizzle(sql, { schema });
