@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:studio": "drizzle-kit studio",
+    "generate": "nuxt generate",
+    "lint": "eslint .",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
+    "drizzle-kit": "^0.19.13",
+    "eslint": "^8.49.0",
+    "nuxt": "^3.7.3",
+    "pg": "^8.11.3"
+  },
+  "dependencies": {
+    "@lucia-auth/adapter-postgresql": "^2.0.1",
+    "@lucia-auth/oauth": "^3.2.0",
+    "@neondatabase/serverless": "^0.6.0",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "drizzle-orm": "^0.28.6",
+    "lucia": "^2.6.0",
+    "postgres": "^3.3.5"
+  }
+}
