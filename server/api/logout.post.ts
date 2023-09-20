@@ -8,5 +8,5 @@ export default defineEventHandler(async (event) => {
   }
   await auth.invalidateSession(session.sessionId);
   authRequest.setSession(null);
-  return sendRedirect(event, "/login");
+  return sendNoContent(event);
 });

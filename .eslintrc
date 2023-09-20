@@ -1,4 +1,16 @@
 {
   "root": true,
-  "extends": ["@nuxt/eslint-config"]
+  "extends": [
+    "@nuxt/eslint-config"
+  ],
+  "rules": {
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+  }
 }

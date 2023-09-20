@@ -1,7 +1,8 @@
-import { OAuthRequestError } from "@lucia-auth/oauth";
+import { OAuthRequestError } from '@lucia-auth/oauth';
 
 export default defineEventHandler(async (event) => {
-  const storedState = getCookie(event, "github_oauth_state");
+  const storedRedirectTargetPath = getCookie(event, 'redirect_target_path');
+  const storedState = getCookie(event, 'github_oauth_state');
   const query = getQuery(event);
   const state = query.state?.toString();
   const code = query.code?.toString();
@@ -22,10 +23,10 @@ export default defineEventHandler(async (event) => {
       if (existingUser) return existingUser;
       const user = await createUser({
         attributes: {
-          name: githubUser.name || "",
+          name: githubUser.name || '',
           email: githubUser.email,
           avatar: githubUser.avatar_url,
-          github_user_id: githubUser.id.toString(),
+          github_user_id: githubUser.id,
         },
       });
       return user;
@@ -38,7 +39,7 @@ export default defineEventHandler(async (event) => {
     });
     const authRequest = auth.handleRequest(event);
     authRequest.setSession(session);
-    return sendRedirect(event, "/"); // redirect to profile page
+    return sendRedirect(event, storedRedirectTargetPath ?? '/'); // redirect to profile page
   } catch (e) {
     console.error(e);
     if (e instanceof OAuthRequestError) {

@@ -1,8 +1,8 @@
-import { sql } from "drizzle-orm";
+import { sql } from 'drizzle-orm';
 
 export default defineEventHandler(async (event) => {
   const body: { path: string } = await readBody(event);
-  if (!body?.path || body.path.length === 0 || !body.path.startsWith("/")) {
+  if (!body?.path || body.path.length === 0 || !body.path.startsWith('/')) {
     throw createError({
       statusCode: 400,
     });

@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { sql } from 'drizzle-orm';
 
 export default defineEventHandler(async (event) => {
   const { page = 1, limit = 10 } = getQuery(event);
@@ -11,6 +11,7 @@ export default defineEventHandler(async (event) => {
     orderBy: (guestbook, { desc }) => [desc(guestbook.createdAt)],
     limit: Number(limit),
     offset: (Number(page) - 1) * Number(limit),
+    with: { user: true }
   });
 
   return {

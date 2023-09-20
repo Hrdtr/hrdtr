@@ -3,10 +3,10 @@ import {
   neonConfig,
   NeonQueryFunction,
   Pool,
-} from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-http";
-import { migrate } from "drizzle-orm/neon-http/migrator";
-import * as schema from "../db/schema";
+} from '@neondatabase/serverless';
+import { drizzle } from 'drizzle-orm/neon-http';
+import { migrate } from 'drizzle-orm/neon-http/migrator';
+import * as schema from '../db/schema';
 
 const runtimeConfig = useRuntimeConfig();
 
@@ -20,7 +20,7 @@ let pool: undefined | Pool = undefined;
 if (!pool) {
   pool = new Pool({ connectionString: runtimeConfig.databaseUrl });
   if (process.dev) {
-    import("undici").then(({ WebSocket }) => {
+    import('undici').then(({ WebSocket }) => {
       neonConfig.webSocketConstructor = WebSocket;
     });
   }
