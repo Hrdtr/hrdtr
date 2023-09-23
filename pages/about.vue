@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About',
+});
+</script>
+
 <template>
   <div class="flex-1">
     <h1 class="text-3xl font-semibold mb-8">

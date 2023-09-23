@@ -1,8 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  templateParams: {
+    separator: '—'
+  }
+})
+</script>
 
 <template>
   <NuxtLayout>
     <NuxtPage />
+    <UNotifications />
   </NuxtLayout>
 </template>
 

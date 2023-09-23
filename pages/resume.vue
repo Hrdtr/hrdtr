@@ -2,6 +2,9 @@
 definePageMeta({
   layout: 'unset'
 })
+useSeoMeta({
+  title: 'Resume',
+});
 
 const works = [
   {

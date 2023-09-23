@@ -17,9 +17,6 @@ export default defineNuxtConfig({
     ghClientId: process.env.GH_CLIENT_ID,
     ghClientSecret: process.env.GH_CLIENT_SECRET,
   },
-  build: {
-    transpile: ['trpc-nuxt'],
-  },
   googleFonts: {
     families: {
       'Hanken Grotesk': true,
@@ -29,10 +26,6 @@ export default defineNuxtConfig({
   },
   image: {
     provider: 'ipx',
-    ipx: {
-      dir: '.nuxt/content-assets/public',
-      domains: ['github.com']
-    },
     dir: '.nuxt/content-assets/public',
     domains: ['github.com']
   },
@@ -45,7 +38,12 @@ export default defineNuxtConfig({
     }
   },
   hooks: {
-    'build:done': mergePublicAssets
+    'build:done': mergePublicAssets,
+    // Workaround for https://github.com/nuxt/cli/issues/169
+    close: () => {
+      if (!process.env.CI) return
+      process.exit(0)
+    }
   },
   pwa: {
     workbox: {

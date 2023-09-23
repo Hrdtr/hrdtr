@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Guestbook',
+});
+
 const page = ref(1)
 const limit = ref(20)
 const { data: signs } = useFetch('/api/guestbook', {

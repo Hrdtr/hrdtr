@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const themeToggleHovered = ref(false)
+const theme = computed(() => useColorMode().value)
+</script>
+
 <template>
   <UContainer class="py-32 max-w-5xl">
     <div class="flex flex-col md:flex-row gap-8">
@@ -15,49 +20,50 @@
         >
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity"
-            href="/"
+            to="/"
             exact
           >
             Home
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity"
-            href="/about/"
+            to="/about/"
           >
             About
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity"
-            href="/projects/"
+            to="/projects/"
           >
             Projects
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity"
-            href="/blog/"
+            to="/blog/"
           >
             Blog
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity"
-            href="/guestbook/"
+            to="/guestbook/"
           >
             Guestbook
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
-            href="/resume/"
+            to="/resume/"
             target="_blank"
           >
             Resume
-            <span class="i-heroicons-arrow-up-right ml-2 opacity-75 -mb-px" />
+            <span class="i-heroicons-arrow-up-right w-3 h-3 ml-1 opacity-75 mb-[-2.75px]" />
           </NuxtLink>
           <NuxtLink
             class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
-            href="/utils/"
+            to="/utils/"
+            target="_blank"
           >
             Utils
-            <span class="i-heroicons-arrow-up-right ml-2 opacity-75 -mb-px" />
+            <span class="i-heroicons-arrow-up-right w-3 h-3 ml-1 opacity-75 mb-[-2.75px]" />
           </NuxtLink>
           <ClientOnly>
             <Transition
@@ -65,13 +71,17 @@
               appear
             >
               <label
-                class="opacity-60 hover:opacity-100 transition-opacity flex flex-row items-center gap-2 cursor-pointer"
+                class="opacity-60 hover:opacity-100 transition-opacity flex flex-row items-center cursor-pointer"
+                @mouseenter="themeToggleHovered = true"
+                @mouseleave="themeToggleHovered = false"
               >
-                <span>Theme</span>
-                <DarkModeToggle
-                  id="theme-toggle"
-                  size="2xs"
-                />
+                <span class="transition-all capitalize">{{ themeToggleHovered ? theme : 'Theme' }}</span>
+                <span class="scale-90 inline-flex items-end">
+                  <DarkModeToggle
+                    id="theme-toggle"
+                    size="2xs"
+                  />
+                </span>
               </label>
             </Transition>
           </ClientOnly>
