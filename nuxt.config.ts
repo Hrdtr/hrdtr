@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui', '@vueuse/nuxt', '@nuxt/image', '@nuxtjs/google-fonts', 'nuxt-content-assets', '@nuxt/content', '@kevinmarrec/nuxt-pwa', '@nuxtseo/module'],
   nitro: {
-    preset: 'vercel-edge',
+    preset: 'vercel',
+    // preset: 'vercel-edge',
     moduleSideEffects: ['lucia/polyfill/node'],
     experimental: {
       openAPI: true,
