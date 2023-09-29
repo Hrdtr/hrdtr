@@ -137,7 +137,7 @@ const contacts = [
   {
     name: 'Website',
     text: 'www.hrdtr.dev',
-    link: 'https://www.hrdtr.dev'
+    link: 'https://www.hrdtr.dev/'
   },
   {
     name: 'Email',

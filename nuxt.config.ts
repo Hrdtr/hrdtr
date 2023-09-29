@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   image: {
     provider: 'ipx',
     dir: '.nuxt/content-assets/public',
-    domains: ['github.com']
+    domains: ['github.com', 'upload.wikimedia.org']
   },
   content: {
     highlight: {

@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+
 useSeoMeta({
   title: 'Blog',
 });
+
+const query: QueryBuilderParams = { path: '/blog', limit: 99, sort: [{ published_at: -1 }] }
 </script>
 
 <template>
@@ -10,7 +14,7 @@ useSeoMeta({
       Blog
     </h1>
 
-    <ContentList path="/blog">
+    <ContentList :query="query">
       <template #default="{ list }">
         <div
           v-for="article in list"

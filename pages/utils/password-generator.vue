@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { VueMonacoEditor } from '@guolao/vue-monaco-editor';
-
 definePageMeta({
   layout: 'utils',
   title: 'Password Generator'
