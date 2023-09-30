@@ -32,10 +32,11 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
+      preload: ['go'],
       theme: {
         default: 'github-light',
         dark: 'github-dark'
-      }
+      },
     }
   },
   hooks: {
