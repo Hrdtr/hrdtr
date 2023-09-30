@@ -4,6 +4,9 @@ useHead({
     separator: '—'
   }
 })
+defineOgImage({
+  component: 'Default',
+});
 </script>
 
 <template>
