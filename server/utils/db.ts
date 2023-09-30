@@ -27,7 +27,9 @@ if (!pool) {
 }
 
 const client = drizzle(sql, { schema });
-migrate(client, { migrationsFolder: `./server/db/migrations` });
+if (process.dev) {
+  migrate(client, { migrationsFolder: `./server/db/migrations` });
+}
 
 export const db = {
   sql,

@@ -40,7 +40,9 @@ export default defineNuxtConfig({
     }
   },
   hooks: {
-    'build:done': mergePublicAssets,
+    'build:done': () => {
+      mergePublicAssets()
+    },
     // Workaround for https://github.com/nuxt/cli/issues/169
     close: () => {
       if (!process.env.CI) return
