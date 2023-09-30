@@ -26,7 +26,6 @@ export default defineNuxtConfig({
     useStylesheet: true
   },
   image: {
-    provider: 'ipx',
     dir: '.nuxt/content-assets/public',
     domains: ['github.com', 'upload.wikimedia.org']
   },
