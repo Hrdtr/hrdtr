@@ -14,15 +14,21 @@ const works = [
     description: 'I am responsible for planning, managing, and executing both client and in-house technology-related projects. This entails overseeing the entire project lifecycle, from inception to completion, ensuring successful delivery within specified timelines and budget constraints.'
   },
   {
-    company: 'Jogja Node',
+    company: 'Jogja Code',
     title: 'Front-End Engineer',
-    dates: 'Jul 2022 - Present',
+    dates: 'Jul 2023 - Present',
     description: 'Within this software house, I play a role in crafting the front-end side of numerous client-requested projects, overseeing the entire process from design to usability.'
+  },
+  {
+    company: 'Grand Picasso Hotel',
+    title: 'Front-End Engineer',
+    dates: 'Jul 2022 - Jun 2023',
+    description: 'I contributed my expertise to create internal systems. My role involves designing and developing user-friendly interfaces that enhance operational efficiency and streamline processes within the organization.'
   },
   {
     company: 'Freelance',
     title: 'Full-Stack Developer & Photo/Videographer',
-    dates: 'Mar 2014 - Jun 2022',
+    dates: 'Mar 2016 - Jun 2022',
     description: 'I provide a diverse range of services, such as web/app development, software development, graphic design, and photo/video production. With each project I undertake, I continually expand my knowledge and expertise in these areas.'
   },
   {
@@ -31,24 +37,24 @@ const works = [
     dates: 'Sep 2020 - Jan 2021',
     description: 'Embarking on the journey of building a digital marketing agency from scratch.'
   },
-  {
-    company: 'Cicil.co.id',
-    title: 'Student Ambassador',
-    dates: 'May 2018 - Aug 2020',
-    description: 'Here I have discovered a fresh perspective on the functioning of startup organizations.'
-  },
+  // {
+  //   company: 'Cicil.co.id',
+  //   title: 'Student Ambassador',
+  //   dates: 'May 2018 - Aug 2020',
+  //   description: 'Here I have discovered a fresh perspective on the functioning of startup organizations.'
+  // },
   {
     company: 'Cicil.co.id',
     title: 'Marketing Operation Intern',
     dates: 'Apr 2019 - Dec 2019',
     description: 'Managed marketing automation tools and optimized processes for improved efficiency. Developed and executed content strategies aligned with organizational goals, ensuring effective messaging to target audience.'
   },
-  {
-    company: 'Pisang Keju S3',
-    title: 'Product & Content Designer',
-    dates: 'Mar 2019 - Oct 2019',
-    description: 'Focused on handling product promotions and designing offline advertisements. I have also developed expertise in creating strategic Instagram plans and crafting compelling content for the platform.'
-  }
+  // {
+  //   company: 'Pisang Keju S3',
+  //   title: 'Product & Content Designer',
+  //   dates: 'Mar 2019 - Oct 2019',
+  //   description: 'Focused on handling product promotions and designing offline advertisements. I have also developed expertise in creating strategic Instagram plans and crafting compelling content for the platform.'
+  // }
 ]
 
 const educations = [
@@ -130,7 +136,8 @@ const skills = [
   'https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white: Kubernetes',
   'https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white: Swagger',
   'https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white: Nginx',
-  'Traefik'
+  'Traefik',
+  'Bun'
 ]
 
 const contacts = [
@@ -300,7 +307,7 @@ const contacts = [
           >
           <div
             v-else
-            class="h-[24px] bg-zinc-200 dark:bg-zinc-800 text-[0.60rem] leading-none tracking-wider uppercase px-2 flex items-center justify-center"
+            class="h-[24px] bg-zinc-200 dark:bg-zinc-800 text-[0.60rem] leading-none tracking-widest font-black uppercase px-2 flex items-center justify-center cursor-default"
           >
             {{ skill.split(': ')[0] }}
           </div>
