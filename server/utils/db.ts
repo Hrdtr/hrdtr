@@ -2,11 +2,12 @@ import {
   neon,
   neonConfig,
   NeonQueryFunction,
-  Pool,
 } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { migrate } from 'drizzle-orm/neon-http/migrator';
+import pg from 'pg';
 import * as schema from '../db/schema';
+import type { Pool as TPool } from 'pg';
 
 const runtimeConfig = useRuntimeConfig();
 
@@ -16,14 +17,11 @@ if (!sql) {
   sql = neon(runtimeConfig.databaseUrl);
 }
 
-let pool: undefined | Pool = undefined;
+let pool: undefined | TPool = undefined;
 if (!pool) {
-  pool = new Pool({ connectionString: runtimeConfig.databaseUrl });
-  if (process.dev) {
-    import('undici').then(({ WebSocket }) => {
-      neonConfig.webSocketConstructor = WebSocket;
-    });
-  }
+  pool = new pg.Pool({
+    connectionString: `${runtimeConfig.databaseUrl}?sslmode=require`
+  });
 }
 
 const client = drizzle(sql, { schema });
