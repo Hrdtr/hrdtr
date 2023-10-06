@@ -5,8 +5,8 @@ defineOptions({
 });
 
 const props = defineProps<{
-  title: string,
-  description: string
+  title?: string,
+  description?: string
 }>();
 </script>
 

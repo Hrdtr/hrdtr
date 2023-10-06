@@ -11,6 +11,7 @@
 
     <NuxtImg
       src="/avatar.webp"
+      alt="Herdi Tr's avatar"
       width="128"
       height="128"
       class="rounded-md mt-8"

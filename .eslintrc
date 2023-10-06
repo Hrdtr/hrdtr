@@ -1,7 +1,13 @@
 {
   "root": true,
+  "plugins": [
+    "security-node",
+    "anti-trojan-source"
+  ],
   "extends": [
-    "@nuxt/eslint-config"
+    "@nuxt/eslint-config",
+    "plugin:security-node/recommended",
+    "plugin:anti-trojan-source/recommended"
   ],
   "rules": {
     "quotes": [

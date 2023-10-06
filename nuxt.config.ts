@@ -4,7 +4,7 @@ const mergePublicAssets = async () => await cp('public', '.nuxt/content-assets/p
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@vueuse/nuxt', '@nuxt/image', '@nuxtjs/google-fonts', 'nuxt-content-assets', '@nuxt/content', '@kevinmarrec/nuxt-pwa', '@nuxtseo/module'],
+  modules: ['@nuxt/ui', '@vueuse/nuxt', 'nuxt-security', '@nuxt/image', '@nuxtjs/google-fonts', 'nuxt-content-assets', '@nuxt/content', '@kevinmarrec/nuxt-pwa', '@nuxtseo/module'],
   nitro: {
     preset: 'vercel',
     // preset: 'vercel-edge',
