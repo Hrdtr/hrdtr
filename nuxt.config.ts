@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   image: {
     dir: '.nuxt/content-assets/public',
-    domains: ['github.com', 'upload.wikimedia.org']
+    domains: ['github.com', 'upload.wikimedia.org', 'img.shields.io']
   },
   content: {
     highlight: {
