@@ -68,4 +68,12 @@ export default defineNuxtConfig({
     /* https://github.com/harlan-zw/nuxt-link-checker/issues/18 */
     failOnError: false,
   },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: {
+        'img-src': ["'self'", 'https:', 'data:'],
+      }
+    }
+  }
 });

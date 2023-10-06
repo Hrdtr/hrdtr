@@ -136,8 +136,8 @@ const skills = [
   'https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white: Kubernetes',
   'https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white: Swagger',
   'https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white: Nginx',
-  'Traefik',
-  'Bun'
+  'https://img.shields.io/badge/Traefik-00a0c4?style=for-the-badge&logo=Traefik&logoColor=f8f3e0: Traefik',
+  'https://img.shields.io/badge/Bun-f472b6?style=for-the-badge&logo=Bun&logoColor=f8f3e0: Bun'
 ]
 
 const contacts = [
