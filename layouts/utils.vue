@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+  titleTemplate: '%s %separator .dev/utils',
+})
+
 const metas = useUtilitiesMeta()
 const metaTags = [...new Set(metas.map(item => item.tags))].flat()
 const metasByTag = metas.reduce((acc, item) => {

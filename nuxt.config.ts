@@ -56,8 +56,8 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://www.hrdtr.dev',
-    name: 'Hrdtr',
-    description: "Herdi Tr's Personal Space",
+    name: 'Herdi Tr.',
+    description: 'Software engineer with a deep love for crafting elegant and efficient solutions',
     defaultLocale: 'en',
     identity: {
       type: 'Person'

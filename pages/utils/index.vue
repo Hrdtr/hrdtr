@@ -4,6 +4,7 @@ definePageMeta({
   middleware: () => navigateTo('/utils/base64-text-encoder/')
 })
 useSeoMeta({
-  title: 'Developer Utilities'
+  title: 'Developer Utilities',
+  titleTemplate: '%s',
 })
 </script>
