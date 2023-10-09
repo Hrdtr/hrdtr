@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     preset: 'vercel',
     // preset: 'vercel-edge',
     moduleSideEffects: ['lucia/polyfill/node'],
+    compressPublicAssets: true,
     experimental: {
       openAPI: true,
     },
