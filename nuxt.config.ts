@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    prerender: {
-      failOnError: false,
-    },
     experimental: {
       openAPI: true,
     },

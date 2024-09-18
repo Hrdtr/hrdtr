@@ -8,6 +8,8 @@ export default defineNitroPlugin(async () => {
     const db = useDBClient()
     await migrate(db, { migrationsFolder: 'server/database/migrations' })
       .then(() => consola.success('Database migrations succeeded'))
-      .catch(err => consola.error('Database migrations failed', err))
+      .catch((err) => {
+        consola.error('Database migrations failed', err)
+      })
   })
 })

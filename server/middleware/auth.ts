@@ -2,8 +2,11 @@ import type { Session, User } from 'lucia'
 import { verifyRequestOrigin } from 'lucia'
 
 export default defineEventHandler(async (event) => {
-  // Only required in non-GET requests (POST, PUT, DELETE, PATCH, etc)
-  if (event.method !== 'GET') {
+  // Skip this middleware when prerendering contents
+  if (import.meta.prerender) return
+
+  // CSRF protection. Only required in non-GET requests (POST, PUT, DELETE, PATCH, etc)
+  if (event.method !== 'GET' && !event.path.startsWith('/api/_hub')) {
     const originHeader = getHeader(event, 'Origin') ?? null
     const hostHeader = getHeader(event, 'Host') ?? null // Might need to use `X-Forwarded-Host` instead
     if (!originHeader || !hostHeader || !verifyRequestOrigin(originHeader, [hostHeader])) {
