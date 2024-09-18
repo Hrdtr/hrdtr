@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    prerender: {
+      failOnError: false,
+    },
     experimental: {
       openAPI: true,
     },
@@ -44,6 +47,10 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
+  },
+  // @nuxtjs/seo
+  ogImage: {
+    enabled: false,
   },
   site: {
     url: 'https://www.hrdtr.dev',
