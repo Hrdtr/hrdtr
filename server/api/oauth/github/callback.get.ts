@@ -17,6 +17,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const tokens = await auth.github.validateAuthorizationCode(String(code))
+    console.info('tokens', tokens)
     const githubUser = await $fetch<GitHubUser>('https://api.github.com/user', {
       headers: { Authorization: `Bearer ${tokens.accessToken}` },
     })
