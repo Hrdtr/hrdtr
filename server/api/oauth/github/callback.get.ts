@@ -16,9 +16,7 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    console.info('code', code)
     const tokens = await auth.github.validateAuthorizationCode(String(code))
-    console.info('accessToken', tokens.accessToken)
     const githubUserResponse = await fetch('https://api.github.com/user', {
       headers: {
         'Accept': 'application/vnd.github+json',
@@ -27,10 +25,6 @@ export default defineEventHandler(async (event) => {
         'User-Agent': 'hrdtr.dev',
       },
     })
-    console.info('githubUserResponse', JSON.stringify(githubUserResponse, null, 2))
-    console.info('githubUserResponse.headers', JSON.stringify(githubUserResponse.headers, null, 2))
-    const cloned = githubUserResponse.clone()
-    console.info('resp.text()', await cloned.text())
     const githubUser = await githubUserResponse.json<GitHubUser>()
     const existingUser = await db.query.user.findFirst({ where: field => eq(field.githubUserId, String(githubUser.id)) })
 
@@ -60,7 +54,6 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, redirectPath ?? '/')
   }
   catch (e) {
-    console.error(e)
     if (e instanceof OAuth2RequestError) {
       throw createError({ status: 400 })
     }
