@@ -19,13 +19,16 @@ export default defineEventHandler(async (event) => {
     console.info('code', code)
     const tokens = await auth.github.validateAuthorizationCode(String(code))
     console.info('accessToken', tokens.accessToken)
-    const githubUser = await $fetch<GitHubUser>('https://api.github.com/user', {
+    const githubUserResponse = await fetch('https://api.github.com/user', {
       headers: {
         'Accept': 'application/vnd.github+json',
         'Authorization': `Bearer ${tokens.accessToken}`,
         'X-GitHub-Api-Version': '2022-11-28',
       },
     })
+    console.info('githubUserResponse', githubUserResponse)
+    console.info('githubUserResponse.headers', githubUserResponse.headers)
+    const githubUser = await githubUserResponse.json<GitHubUser>()
     const existingUser = await db.query.user.findFirst({ where: field => eq(field.githubUserId, String(githubUser.id)) })
 
     if (existingUser) {
