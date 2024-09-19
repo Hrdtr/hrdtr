@@ -26,8 +26,10 @@ export default defineEventHandler(async (event) => {
         'X-GitHub-Api-Version': '2022-11-28',
       },
     })
-    console.info('githubUserResponse', githubUserResponse)
-    console.info('githubUserResponse.headers', githubUserResponse.headers)
+    console.info('githubUserResponse', JSON.stringify(githubUserResponse, null, 2))
+    console.info('githubUserResponse.headers', JSON.stringify(githubUserResponse.headers, null, 2))
+    const cloned = githubUserResponse.clone()
+    console.info('resp.text()', await cloned.text())
     const githubUser = await githubUserResponse.json<GitHubUser>()
     const existingUser = await db.query.user.findFirst({ where: field => eq(field.githubUserId, String(githubUser.id)) })
 
