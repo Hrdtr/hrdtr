@@ -24,6 +24,7 @@ export default defineEventHandler(async (event) => {
         'Accept': 'application/vnd.github+json',
         'Authorization': `Bearer ${tokens.accessToken}`,
         'X-GitHub-Api-Version': '2022-11-28',
+        'User-Agent': 'hrdtr.dev',
       },
     })
     console.info('githubUserResponse', JSON.stringify(githubUserResponse, null, 2))
