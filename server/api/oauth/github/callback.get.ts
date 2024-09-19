@@ -48,6 +48,7 @@ export default defineEventHandler(async (event) => {
     return sendRedirect(event, redirectPath ?? '/')
   }
   catch (e) {
+    console.error(e)
     if (e instanceof OAuth2RequestError) {
       throw createError({ status: 400 })
     }
