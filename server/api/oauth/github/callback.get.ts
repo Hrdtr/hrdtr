@@ -1,7 +1,7 @@
 import { OAuth2RequestError } from 'arctic'
 
 export default defineEventHandler(async (event) => {
-  const auth = useAuth()
+  const auth = useAuth(event)
   const db = useDBClient()
 
   const {

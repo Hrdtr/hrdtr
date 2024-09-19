@@ -1,9 +1,10 @@
 import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle'
 import { GitHub } from 'arctic'
 import { Lucia, TimeSpan } from 'lucia'
+import type { H3Event, EventHandlerRequest } from 'h3'
 
-export const useAuth = () => {
-  const config = useRuntimeConfig()
+export const useAuth = (event: H3Event<EventHandlerRequest>) => {
+  const config = useRuntimeConfig(event)
   const db = useDBClient()
   const adapter = new DrizzleSQLiteAdapter(db, schema.userSession, schema.user)
   const lucia = new Lucia(adapter, {

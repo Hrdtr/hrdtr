@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
     sameSite: 'lax',
   })
 
-  const auth = useAuth()
+  const auth = useAuth(event)
   const state = generateState()
   setCookie(event, 'github_oauth_state', state, {
     path: '/',

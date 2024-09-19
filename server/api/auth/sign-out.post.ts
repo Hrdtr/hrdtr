@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401 })
   }
 
-  const auth = useAuth()
+  const auth = useAuth(event)
   await auth.invalidateSession(event.context.auth.session.id)
   appendHeader(event, 'Set-Cookie', auth.createBlankSessionCookie().serialize())
   return null

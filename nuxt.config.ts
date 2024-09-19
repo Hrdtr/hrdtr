@@ -3,10 +3,11 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
   runtimeConfig: {
+    // Need to explicitly set defaults to env value here. See: https://github.com/nuxt/nuxt/issues/26149
     oauth: {
       github: {
-        clientId: '',
-        clientSecret: '',
+        clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
+        clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET,
       },
     },
   },
