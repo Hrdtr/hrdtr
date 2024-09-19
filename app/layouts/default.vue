@@ -20,9 +20,7 @@ const dark = computed({
     />
     <div class="w-full max-w-5xl mx-auto px-4 py-32 z-10">
       <div class="flex flex-col md:flex-row gap-8">
-        <div
-          class="static md:sticky top-0 md:top-32 md:self-start z-20 pt-4 md:pt-0 -mx-4 md:mx-0 px-4 md:px-0"
-        >
+        <div class="flex-shrink-0 static md:sticky top-0 md:top-32 md:self-start z-20 pt-4 md:pt-0 -mx-4 md:mx-0 px-4 md:px-0">
           <div class="mb-6 md:pt-1.5">
             <Logo class="w-8 h-8" />
           </div>
@@ -97,7 +95,9 @@ const dark = computed({
             </ClientOnly>
           </nav>
         </div>
-        <slot />
+        <main class="flex-1">
+          <slot />
+        </main>
       </div>
     </div>
   </div>

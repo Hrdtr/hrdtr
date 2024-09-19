@@ -61,4 +61,21 @@ export default defineNuxtConfig({
     twitter: '@hrdtr_',
     trailingSlash: true,
   },
+  sitemap: {
+    sitemaps: {
+      pages: {
+        includeAppSources: true,
+      },
+      blog: {
+        sources: [
+          '/api/__sitemap__/urls/blog',
+        ],
+      },
+      projects: {
+        sources: [
+          '/api/__sitemap__/urls/projects',
+        ],
+      },
+    },
+  },
 })
