@@ -12,6 +12,7 @@ export const useAuth = (event: H3Event<EventHandlerRequest>) => {
     sessionCookie: {
       attributes: {
         secure: !import.meta.dev,
+        domain: 'hrdtr.dev',
       },
     },
     getUserAttributes: attributes => attributes,
