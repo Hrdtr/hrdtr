@@ -7,8 +7,8 @@ visuals:
   - '/projects/toodo-rn/media/1.jpg'
   - '/projects/toodo-rn/media/2.jpg'
 tech:
-  - 'https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB: React Native'
-  - 'https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase: Firebase'
+  - 'https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB: React Native'
+  - 'https://img.shields.io/badge/firebase-%23039BE5.svg?style=flat&logo=firebase: Firebase'
 wdid:
   - 'UI/UX Design'
   - 'Frontend Development'

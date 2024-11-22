@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
   runtimeConfig: {
+    public: {
+      app: {
+        baseUrl: process.env.NUXT_PUBLIC_APP_BASE_URL,
+      },
+    },
     // Need to explicitly set defaults to env value here. See: https://github.com/nuxt/nuxt/issues/26149
     oauth: {
       github: {
@@ -13,13 +18,15 @@ export default defineNuxtConfig({
   },
   nitro: {
     experimental: {
-      openAPI: true,
+      // See: https://github.com/nuxt/content/issues/2839
+      // openAPI: true,
     },
   },
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/color-mode',

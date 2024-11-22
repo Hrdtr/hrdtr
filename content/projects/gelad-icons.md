@@ -6,8 +6,8 @@ cover_image: '/projects/gelad-icons/media/cover.png'
 visuals:
   - '/projects/gelad-icons/media/1.jpeg'
 tech:
-  - 'https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white: Adobe Illustrator'
-  - 'https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white: Affinity Designer'
+  - 'https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=flat&logo=adobe%20illustrator&logoColor=white: Adobe Illustrator'
+  - 'https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=flat&logo=affinity-designer&logoColor=white: Affinity Designer'
 wdid:
   - 'UI/UX Design'
 ---

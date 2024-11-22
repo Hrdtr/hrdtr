@@ -5,8 +5,8 @@ state: 'INACTIVE'
 cover_image: '/projects/lava-tour-merapi-adventure/media/cover.png'
 visuals:
 tech:
-  - 'https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
-  - 'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB: Express'
+  - 'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
+  - 'https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white: Firebase'
 wdid:
   - 'UI/UX Design'
   - 'Frontend Development'

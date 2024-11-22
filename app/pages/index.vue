@@ -89,7 +89,10 @@
         class="flex flex-row items-center group"
       >
         <span class="opacity-90 group-hover:opacity-100 transition-opacity">iam@icm.hrdtr.dev</span>
-        <span class="i-heroicons-arrow-top-right-on-square ml-2 opacity-75" />
+        <Icon
+          name="heroicons:arrow-top-right-on-square"
+          class="ml-2 opacity-75"
+        />
       </a>
     </div>
   </div>

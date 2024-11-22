@@ -12,7 +12,7 @@ visuals:
   - '/projects/toodo-ionic/media/6.jpeg'
   - '/projects/toodo-ionic/media/7.jpeg'
 tech:
-  - 'https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white: Ionic'
+  - 'https://img.shields.io/badge/Ionic-%233880FF.svg?style=flat&logo=Ionic&logoColor=white: Ionic'
   - 'Capacitor'
   - 'Appwrite'
 wdid:

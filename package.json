@@ -8,30 +8,32 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@nuxthub/core": "^0.7.19",
-    "nuxt": "^3.13.2",
-    "vue": "latest",
+    "nuxt": "^3.14.1592",
+    "vue": "^3.5.13",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@lucia-auth/adapter-drizzle": "^1.1.0",
-    "@nuxt/content": "^2.13.2",
-    "@nuxt/eslint": "^0.5.7",
-    "@nuxt/fonts": "^0.8.0",
-    "@nuxt/image": "^1.8.0",
-    "@nuxtjs/color-mode": "^3.5.1",
-    "@nuxtjs/seo": "2.0.0-rc.21",
-    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@nuxt/content": "^2.13.4",
+    "@nuxt/eslint": "^0.7.1",
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxt/icon": "^1.8.2",
+    "@nuxt/image": "^1.8.1",
+    "@nuxthub/core": "^0.8.7",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/seo": "2.0.0-rc.23",
+    "@nuxtjs/tailwindcss": "^6.12.2",
     "@tailwindcss/typography": "^0.5.15",
-    "arctic": "^1.9.2",
-    "drizzle-kit": "^0.24.2",
-    "drizzle-orm": "^0.33.0",
-    "lucia": "^3.2.0",
-    "nanoid": "^5.0.7",
-    "typescript": "^5.6.2",
-    "wrangler": "^3.78.4"
+    "arctic": "^2.2.2",
+    "drizzle-kit": "^0.28.1",
+    "drizzle-orm": "^0.36.3",
+    "nanoid": "^5.0.8",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.10",
+    "wrangler": "^3.89.0"
   }
 }

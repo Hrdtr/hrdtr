@@ -6,8 +6,8 @@ cover_image: '/projects/universal-coconut/media/cover.png'
 visuals:
   - '/projects/universal-coconut/media/1.jpeg'
 tech:
-  - 'https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
-  - 'https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase: Firebase'
+  - 'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
+  - 'https://img.shields.io/badge/firebase-%23039BE5.svg?style=flat&logo=firebase: Firebase'
 wdid:
   - 'UI/UX Design'
   - 'Frontend Development'

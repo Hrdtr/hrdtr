@@ -14,7 +14,7 @@ const dark = computed({
     <NuxtImg
       src="/background.webp"
       alt=""
-      class="absolute object-cover -top-20 w-screen h-screen z-0 pointer-events-none opacity-50"
+      class="absolute object-cover -top-20 w-screen h-screen z-0 pointer-events-none opacity-35"
       format="webp"
       preload
     />
@@ -59,24 +59,20 @@ const dark = computed({
             >
               Guestbook
             </NuxtLink>
+            <div
+              role="separator"
+              class="w-px h-4 my-auto md:w-4 md:h-px bg-neutral-300 dark:bg-neutral-700"
+            />
             <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
               to="/resume/"
               target="_blank"
             >
               Resume
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-up-right w-4 h-4 ml-1 opacity-75"
-              ><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+              <Icon
+                name="heroicons:arrow-top-right-on-square"
+                class="ml-2 opacity-75"
+              />
             </NuxtLink>
             <ClientOnly>
               <Transition
@@ -105,7 +101,7 @@ const dark = computed({
 
 <style lang="postcss">
 :root {
-  @apply bg-neutral-50 text-neutral-700 dark:bg-neutral-950 dark:text-neutral-300;
+  @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200;
 }
 
 .router-link-exact-active {

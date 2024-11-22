@@ -1,8 +1,8 @@
 import { OAuth2RequestError } from 'arctic'
 
 export default defineEventHandler(async (event) => {
-  const auth = useAuth(event)
   const db = useDBClient()
+  const githubOAuth2 = useGithubOAuth2(event)
 
   const {
     code = null,
@@ -16,22 +16,21 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    const tokens = await auth.github.validateAuthorizationCode(String(code))
-    const githubUserResponse = await fetch('https://api.github.com/user', {
+    const tokens = await githubOAuth2.validateAuthorizationCode(String(code))
+    const githubUser = await $fetch<GitHubUser>('https://api.github.com/user', {
       headers: {
         'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer ${tokens.accessToken}`,
+        'Authorization': `Bearer ${tokens.accessToken()}`,
         'X-GitHub-Api-Version': '2022-11-28',
         'User-Agent': 'hrdtr.dev',
       },
     })
-    const githubUser = await githubUserResponse.json<GitHubUser>()
     const existingUser = await db.query.user.findFirst({ where: field => eq(field.githubUserId, String(githubUser.id)) })
 
     if (existingUser) {
-      const session = await auth.createSession(existingUser.id, {})
-      const sessionCookie = auth.createSessionCookie(session.id)
-      appendResponseHeaders(event, { 'Set-Cookie': sessionCookie.serialize() })
+      const sessionToken = createSessionToken()
+      const session = await createSession(event, sessionToken, existingUser)
+      setSessionTokenCookie(event, sessionToken, session)
       deleteCookie(event, 'redirected_from')
       deleteCookie(event, 'github_oauth_state')
       return sendRedirect(event, redirectPath ?? '/')
@@ -46,9 +45,9 @@ export default defineEventHandler(async (event) => {
       githubUserId: String(githubUser.id),
     })
 
-    const session = await auth.createSession(userId, {})
-    const sessionCookie = auth.createSessionCookie(session.id)
-    appendResponseHeaders(event, { 'Set-Cookie': sessionCookie.serialize() })
+    const sessionToken = createSessionToken()
+    const session = await createSession(event, sessionToken, { id: userId })
+    setSessionTokenCookie(event, sessionToken, session)
     deleteCookie(event, 'redirected_from')
     deleteCookie(event, 'github_oauth_state')
     return sendRedirect(event, redirectPath ?? '/')

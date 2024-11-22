@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
     sameSite: 'lax',
   })
 
-  const auth = useAuth(event)
+  const githubOAuth2 = useGithubOAuth2(event)
   const state = generateState()
   setCookie(event, 'github_oauth_state', state, {
     path: '/',
@@ -20,6 +20,6 @@ export default defineEventHandler(async (event) => {
     sameSite: 'lax',
   })
 
-  const url = await auth.github.createAuthorizationURL(state)
+  const url = githubOAuth2.createAuthorizationURL(state, [])
   return sendRedirect(event, url.toString())
 })

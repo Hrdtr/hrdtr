@@ -11,6 +11,7 @@ export {
   and,
   count,
   eq,
+  notInArray,
   or,
   sql,
 } from 'drizzle-orm'

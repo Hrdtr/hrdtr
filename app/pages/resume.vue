@@ -9,21 +9,27 @@ useSeoMeta({
 const works = [
   {
     company: 'AM Collective',
-    title: 'Tech Lead',
+    title: 'Techical Lead Lead',
     dates: 'Aug 2022 - Present',
-    description: 'I am responsible for planning, managing, and executing both client and in-house technology-related projects. This entails overseeing the entire project lifecycle, from inception to completion, ensuring successful delivery within specified timelines and budget constraints.',
+    description: 'I am responsible for planning, managing, and executing both client and in-house technology projects. My role involves overseeing the entire project lifecycle—from initial concept to final delivery—while ensuring adherence to timelines, budget constraints, and quality standards. I collaborate closely with cross-functional teams to align technical solutions with business goals and drive the successful implementation of innovative, scalable, and efficient systems.',
   },
   {
-    company: 'Jogja Code',
-    title: 'Front-End Engineer',
-    dates: 'Jul 2023 - Present',
-    description: 'Within this software house, I play a role in crafting the front-end side of numerous client-requested projects, overseeing the entire process from design to usability.',
+    company: 'Jogja Node',
+    title: 'DevOps Engineer',
+    dates: 'Jul 2023 - Oct 2024',
+    description: 'I managed the transition of workflows from GitLab to GitHub, ensuring a seamless migration process. I automated key processes, including release management, changelog generation, and versioning to enhance efficiency and reduce manual effort. My work focused on optimizing CI/CD pipelines and improving the overall development workflow, enabling the team to deliver projects faster and more reliably.',
   },
   {
-    company: 'Grand Picasso Hotel',
+    company: 'Jogja Node',
     title: 'Front-End Engineer',
     dates: 'Jul 2022 - Jun 2023',
-    description: 'I contributed my expertise to create internal systems. My role involves designing and developing user-friendly interfaces that enhance operational efficiency and streamline processes within the organization.',
+    description: 'As a Frontend Developer at JogjaNode, I worked on diverse private client projects across multiple industries. I advocated for modern development practices, leading the transition away from jQuery and usage of more flexible tools like TailwindCSS. I contributed to drafting a design system for improved consistency and scalability and established team-opinionated stacks to streamline project development. Additionally, I bootstrapped project repositories and collaborated closely with the team to deliver high-quality, maintainable solutions tailored to client needs.',
+  },
+  {
+    company: 'Picasso',
+    title: 'Front-End Engineer',
+    dates: 'Jul 2022 - Jun 2023',
+    description: 'I contributed to the development and maintenance of various hotel-related projects, including a reservation module, finance module, restaurant POS system, and membership management panel. I collaborated with cross-functional teams to create user-friendly and scalable solutions, ensuring seamless functionality and responsiveness across devices. My responsibilities included designing intuitive interfaces, optimizing performance for faster load times, and delivering high-quality code that enhanced the overall user experience. Through these efforts, I played a key role in streamlining hotel operations and improving customer engagement.',
   },
   {
     company: 'Freelance',
@@ -33,8 +39,8 @@ const works = [
   },
   {
     company: 'Apurva Digital',
-    title: 'Tech Lead',
-    dates: 'Sep 2020 - Jan 2021',
+    title: 'Technical Lead',
+    dates: 'May 2020 - Jan 2021',
     description: 'Embarking on the journey of building a digital marketing agency from scratch.',
   },
   // {
@@ -47,7 +53,7 @@ const works = [
     company: 'Cicil.co.id',
     title: 'Marketing Operation Intern',
     dates: 'Apr 2019 - Dec 2019',
-    description: 'Managed marketing automation tools and optimized processes for improved efficiency. Developed and executed content strategies aligned with organizational goals, ensuring effective messaging to target audience.',
+    description: 'I focused on automating processes to enhance the efficiency of the marketing team. My contributions included developing an email blast system to streamline outreach efforts, automating the generation and signing of Memorandums of Understanding (MoUs), and supporting other operational tasks to reduce manual workload. These initiatives helped optimize marketing workflows and improve team productivity.',
   },
   // {
   //   company: 'Pisang Keju S3',
@@ -88,56 +94,56 @@ const awards = [
 ]
 
 const skills = [
-  'https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white: Github Actions',
-  'https://img.shields.io/badge/circle%20ci-%23161616.svg?style=for-the-badge&logo=circleci&logoColor=white: Circle CI',
-  'https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white: Gitlab CI',
-  'https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white: Firebase',
-  'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white: MongoDB',
-  'https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white: PostgreSQl',
-  'https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white: Redis',
-  'https://img.shields.io/badge/SurrealDB-FF00A0?style=for-the-badge&logo=surrealdb&logoColor=white: SurrealDB',
-  'https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white: Adobe Creative Cloud',
-  'https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white: Affinity Designer',
-  'https://img.shields.io/badge/affinityphoto-%237E4DD2.svg?style=for-the-badge&logo=affinity-photo&logoColor=white: Affinity Photo',
-  'https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white: Figma',
-  'https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black: Sketch',
-  'https://img.shields.io/badge/deno%20js-000000?style=for-the-badge&logo=deno&logoColor=white: Deno',
-  'https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white: Electron.JS',
-  'https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37: Expo',
-  'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB: Express.JS',
-  'https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white: Fastify',
-  'https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white: Ionic',
-  'https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white: NextJS',
-  'https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white: NodeJS',
-  'https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82: Nuxt',
-  'https://img.shields.io/badge/nx-143055?style=for-the-badge&logo=nx&logoColor=white: NX',
-  'https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220: PNPM',
-  'https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB: React',
-  'https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB): React Native',
-  'https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101: Socket.IO',
-  'https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white: Svelte',
-  'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white: TailwindCSS',
-  'https://img.shields.io/badge/tauri-%2324C8DB.svg?style=for-the-badge&logo=tauri&logoColor=%23FFFFFF: Tauri',
-  'https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white: UnoCSS',
-  'https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white: Vite',
-  'https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D: VueJS',
-  'https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black: Webpack',
-  'https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white: AWS',
-  'https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white: Cloudflare',
-  'https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white: Google Cloud',
-  'https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white: Golang',
-  'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E: Javascript',
-  'https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white: Markdown',
-  'https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white: Rust',
-  'https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white: Shell Script',
-  'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white: TypeScript',
-  'https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white: Prisma',
-  'https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white: Docker',
-  'https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white: Kubernetes',
-  'https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white: Swagger',
-  'https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white: Nginx',
-  'https://img.shields.io/badge/Traefik-00a0c4?style=for-the-badge&logo=Traefik&logoColor=f8f3e0: Traefik',
-  'https://img.shields.io/badge/Bun-f472b6?style=for-the-badge&logo=Bun&logoColor=f8f3e0: Bun',
+  'https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white: Github Actions',
+  'https://img.shields.io/badge/circle%20ci-%23161616.svg?style=flat&logo=circleci&logoColor=white: Circle CI',
+  'https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=flat&logo=gitlab&logoColor=white: Gitlab CI',
+  'https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white: Firebase',
+  'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white: MongoDB',
+  'https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white: PostgreSQl',
+  'https://img.shields.io/badge/redis-%23DD0031.svg?style=flat&logo=redis&logoColor=white: Redis',
+  'https://img.shields.io/badge/SurrealDB-FF00A0?style=flat&logo=surrealdb&logoColor=white: SurrealDB',
+  'https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=flat&logo=Adobe%20Creative%20Cloud&logoColor=white: Adobe Creative Cloud',
+  'https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=flat&logo=affinity-designer&logoColor=white: Affinity Designer',
+  'https://img.shields.io/badge/affinityphoto-%237E4DD2.svg?style=flat&logo=affinity-photo&logoColor=white: Affinity Photo',
+  'https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white: Figma',
+  'https://img.shields.io/badge/Sketch-FFB387?style=flat&logo=sketch&logoColor=black: Sketch',
+  'https://img.shields.io/badge/deno%20js-000000?style=flat&logo=deno&logoColor=white: Deno',
+  'https://img.shields.io/badge/Electron-191970?style=flat&logo=Electron&logoColor=white: Electron.JS',
+  'https://img.shields.io/badge/expo-1C1E24?style=flat&logo=expo&logoColor=#D04A37: Expo',
+  'https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB: Express.JS',
+  'https://img.shields.io/badge/fastify-%23000000.svg?style=flat&logo=fastify&logoColor=white: Fastify',
+  'https://img.shields.io/badge/Ionic-%233880FF.svg?style=flat&logo=Ionic&logoColor=white: Ionic',
+  'https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=white: NextJS',
+  'https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white: NodeJS',
+  'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt',
+  'https://img.shields.io/badge/nx-143055?style=flat&logo=nx&logoColor=white: NX',
+  'https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=flat&logo=pnpm&logoColor=f69220: PNPM',
+  'https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB: React',
+  'https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB): React Native',
+  'https://img.shields.io/badge/Socket.io-black?style=flat&logo=socket.io&badgeColor=010101: Socket.IO',
+  'https://img.shields.io/badge/svelte-%23f1413d.svg?style=flat&logo=svelte&logoColor=white: Svelte',
+  'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white: TailwindCSS',
+  'https://img.shields.io/badge/tauri-%2324C8DB.svg?style=flat&logo=tauri&logoColor=%23FFFFFF: Tauri',
+  'https://img.shields.io/badge/unocss-333333.svg?style=flat&logo=unocss&logoColor=white: UnoCSS',
+  'https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white: Vite',
+  'https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D: VueJS',
+  'https://img.shields.io/badge/webpack-%238DD6F9.svg?style=flat&logo=webpack&logoColor=black: Webpack',
+  'https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white: AWS',
+  'https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=Cloudflare&logoColor=white: Cloudflare',
+  'https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=flat&logo=google-cloud&logoColor=white: Google Cloud',
+  'https://img.shields.io/badge/go-%2300ADD8.svg?style=flat&logo=go&logoColor=white: Golang',
+  'https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E: Javascript',
+  'https://img.shields.io/badge/markdown-%23000000.svg?style=flat&logo=markdown&logoColor=white: Markdown',
+  'https://img.shields.io/badge/rust-%23000000.svg?style=flat&logo=rust&logoColor=white: Rust',
+  'https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white: Shell Script',
+  'https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white: TypeScript',
+  'https://img.shields.io/badge/Prisma-3982CE?style=flat&logo=Prisma&logoColor=white: Prisma',
+  'https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white: Docker',
+  'https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white: Kubernetes',
+  'https://img.shields.io/badge/-Swagger-%23Clojure?style=flat&logo=swagger&logoColor=white: Swagger',
+  'https://img.shields.io/badge/nginx-%23009639.svg?style=flat&logo=nginx&logoColor=white: Nginx',
+  'https://img.shields.io/badge/Traefik-00a0c4?style=flat&logo=Traefik&logoColor=f8f3e0: Traefik',
+  'https://img.shields.io/badge/Bun-f472b6?style=flat&logo=Bun&logoColor=f8f3e0: Bun',
 ]
 
 const contacts = [
@@ -153,18 +159,18 @@ const contacts = [
   },
   {
     name: 'Github',
-    text: 'Hrdtr',
+    text: 'https://github.com/Hrdtr',
     link: 'https://github.com/Hrdtr',
   },
   {
     name: 'X',
-    text: 'Hrdtr_',
+    text: 'https://twitter.com/hrdtr_',
     link: 'https://twitter.com/hrdtr_',
   },
   {
     name: 'Linkedin',
-    text: 'Herdi Tr.',
-    link: 'https://www.linkedin.com/in/herdi-tr-778142170',
+    text: 'https://www.linkedin.com/in/hrdtr',
+    link: 'https://www.linkedin.com/in/hrdtr',
   },
 ]
 </script>
@@ -188,12 +194,12 @@ const contacts = [
         <h1 class="text-lg font-medium">
           Herdi Tr.
         </h1>
-        <span class="opacity-75">Tech Lead & Software Engineer</span>
+        <span class="opacity-75">Technical Lead | Software Engineer</span>
       </div>
     </div>
 
     <div>
-      <p>I am a passionate software engineer with a deep love for crafting elegant and efficient solutions. With a strong foundation in programming languages and frameworks, I specialize in developing innovative software applications that make a difference. </p>
+      <p>Hey, I'm Herdi. Skilled at transforming ideas into impactful code. Adept at designing robust solutions and optimizing performance. Passionate about pushing boundaries in the ever-evolving tech landscape.</p>
     </div>
 
     <div>
@@ -336,7 +342,7 @@ const contacts = [
                   :href="contact.link"
                   target="_blank"
                   class="inline-flex items-center"
-                >{{ contact.text }} <span class="i-heroicons-arrow-top-right-on-square inline-block ml-1 opacity-75" /></a>
+                >{{ contact.text }}</a>
               </div>
             </td>
           </tr>

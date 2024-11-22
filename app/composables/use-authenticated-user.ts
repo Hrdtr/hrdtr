@@ -1,5 +1,5 @@
-import type { User } from 'lucia'
+import type { InferSelectModel } from 'drizzle-orm'
 
 export const useAuthenticatedUser = () => {
-  return useState<User | null>('user', () => null)
+  return useState<InferSelectModel<typeof schema.user> | null>('user', () => null)
 }

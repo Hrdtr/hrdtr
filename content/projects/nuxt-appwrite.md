@@ -5,8 +5,8 @@ state: 'ACTIVE'
 cover_image: '/projects/nuxt-appwrite/media/cover.jpeg'
 visuals:
 tech:
-  - 'https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
-  - 'Appwrite'
+  - 'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
+  - 'https://img.shields.io/badge/Appwrite-EEEFF1?style=flat&logo=appwrite&logoColor=#F02E65: Appwrite'
 wdid:
   - 'Development'
   - 'Maintenance'

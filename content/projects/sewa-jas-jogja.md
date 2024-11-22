@@ -5,8 +5,8 @@ state: 'ACTIVE'
 cover_image: '/projects/sewa-jas-jogja/media/cover.png'
 visuals:
 tech:
-  - 'https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
-  - 'https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white: Supabase'
+  - 'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt'
+  - 'https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white: Supabase'
 wdid:
   - 'UI/UX Design'
   - 'Frontend Development'
