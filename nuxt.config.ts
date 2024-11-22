@@ -16,6 +16,16 @@ export default defineNuxtConfig({
       },
     },
   },
+  app: {
+    layoutTransition: {
+      name: 'layout',
+      mode: 'out-in',
+    },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
+  },
   nitro: {
     experimental: {
       // See: https://github.com/nuxt/content/issues/2839
@@ -32,6 +42,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
   ],
   eslint: {
     config: {

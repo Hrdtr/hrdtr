@@ -10,4 +10,27 @@
 :root {
   font-family: "Plus Jakarta", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.3s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.15s;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
 </style>

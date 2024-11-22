@@ -61,7 +61,7 @@ const dark = computed({
             </NuxtLink>
             <div
               role="separator"
-              class="w-px h-4 my-auto md:w-4 md:h-px bg-neutral-300 dark:bg-neutral-700"
+              class="flex-shrink-0 w-px h-4 my-auto md:w-4 md:h-px bg-neutral-400 dark:bg-neutral-600"
             />
             <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
