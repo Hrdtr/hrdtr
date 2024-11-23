@@ -58,9 +58,9 @@ useEventListener('message', (event) => {
 <template>
   <div class="w-full h-dvh flex flex-col relative bg-neutral-950 text-neutral-200">
     <div class="h-[50vh] flex-shrink-0">
-      <CodeEditor
+      <CodeMirror
         v-model="code"
-        :options="{ minimap: { enabled: false } }"
+        :lang="() => import('@codemirror/lang-javascript').then(m => m.javascript())"
       />
     </div>
     <button
