@@ -1,18 +1,21 @@
 <script setup lang="ts">
+import { compressToEncodedURIComponent, decompressFromEncodedURIComponent } from 'lz-string'
+
 definePageMeta({
   layout: false,
 })
 
-const code = ref({
-  js: `import { ofetch } from 'https://esm.sh/ofetch'\n\nconst res = await ofetch('https://jsonplaceholder.typicode.com/todos/1')\nconsole.log(res)\n`,
-  html: '',
-  css: '',
-})
-const codeSnapshot = ref({
-  js: '',
-  html: '',
-  css: '',
-})
+const route = useRoute()
+
+const iframeEl = useTemplateRef('iframeElRef')
+const code = ref(route.query.code && typeof route.query.code === 'string'
+  ? JSON.parse(decompressFromEncodedURIComponent(route.query.code))
+  : {
+      js: `import { ofetch } from 'https://esm.sh/ofetch'\n\nconst res = await ofetch('https://jsonplaceholder.typicode.com/todos/1')\nconsole.log(res)\n`,
+      html: '',
+      css: '',
+    })
+const codeSnapshot = ref({ ...code.value })
 const consoleOutput = ref<string>('')
 
 const initializationScript = `
@@ -163,8 +166,9 @@ const srcdoc = computed(() => `
 
 const runKey = ref(0)
 const runCode = () => {
+  if (!iframeEl.value) return
   consoleOutput.value = ''
-  codeSnapshot.value = code.value
+  codeSnapshot.value = { ...code.value }
   runKey.value++
 }
 
@@ -207,6 +211,12 @@ const outputTab = ref('consoleOutput')
 
 const hideEditorView = ref(false)
 // const hideOutputView = ref(false)
+
+const { copy } = useClipboard()
+const share = async () => {
+  await copy(location.origin + location.pathname + '?code=' + compressToEncodedURIComponent(JSON.stringify(code.value)))
+  alert('URL copied to clipboard')
+}
 </script>
 
 <template>
@@ -218,7 +228,7 @@ const hideEditorView = ref(false)
       <div class="p-2 border-b border-background-content/10 flex flex-row items-center justify-between">
         <!-- Tab js html css -->
         <div
-          class="flex flex-row gap-2"
+          class="flex flex-row gap-1"
           role="tablist"
           aria-orientation="horizontal"
           tabindex="-1"
@@ -259,17 +269,30 @@ const hideEditorView = ref(false)
           </button>
         </div>
 
-        <button
-          class="px-2 py-1 flex-shrink-0 text-sm rounded border border-background-content/10 transition inline-flex items-center bg-transparent hover:bg-background-content/10 opacity-65 hover:opacity-100"
-          type="button"
-          tabindex="0"
-          @click="runCode"
-        >
-          Run <Icon
-            name="lucide:play"
-            class="ml-1 -mr-0.5 opacity-75"
-          />
-        </button>
+        <div class="flex flex-row gap-1">
+          <button
+            class="px-2 py-1 flex-shrink-0 text-sm rounded border border-background-content/10 transition inline-flex items-center bg-transparent hover:bg-background-content/10 opacity-65 hover:opacity-100"
+            type="button"
+            tabindex="0"
+            @click="share"
+          >
+            <Icon
+              name="lucide:share-2"
+              class="size-5 opacity-75"
+            />
+          </button>
+          <button
+            class="px-2 py-1 flex-shrink-0 text-sm rounded border border-background-content/10 transition inline-flex items-center bg-transparent hover:bg-background-content/10 opacity-65 hover:opacity-100"
+            type="button"
+            tabindex="0"
+            @click="runCode"
+          >
+            Run <Icon
+              name="lucide:play"
+              class="ml-1 -mr-0.5 opacity-75"
+            />
+          </button>
+        </div>
       </div>
       <div class="flex-shrink-0 flex-1 overflow-y-auto">
         <CodeMirror
@@ -297,7 +320,7 @@ const hideEditorView = ref(false)
       <div class="p-2 border-y border-background-content/10 flex flex-row items-center justify-between">
         <!-- Tab js html css -->
         <div
-          class="flex flex-row gap-2"
+          class="flex flex-row gap-1"
           role="tablist"
           aria-orientation="horizontal"
           tabindex="-1"
@@ -326,7 +349,7 @@ const hideEditorView = ref(false)
             Preview
           </button>
         </div>
-        <div class="flex flex-row gap-2">
+        <div class="flex flex-row gap-1">
           <button
             class="px-2 py-1 flex-shrink-0 text-sm rounded border border-background-content/10 transition inline-flex items-center bg-transparent hover:bg-background-content/10 opacity-65 hover:opacity-100"
             type="button"
@@ -367,14 +390,14 @@ const hideEditorView = ref(false)
             <pre v-else>{{ line }}</pre>
           </div>
         </template>
-        <!-- <template v-if="outputTab === 'documentPreview'"> -->
+
         <iframe
+          ref="iframeElRef"
           :key="runKey"
           :srcdoc="srcdoc"
           :class="outputTab === 'documentPreview' ? 'w-full h-full bg-white rounded' : 'hidden'"
           sandbox="allow-scripts allow-same-origin"
         />
-        <!-- </template> -->
       </div>
     </div>
   </div>
