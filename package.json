@@ -46,7 +46,6 @@
     "drizzle-kit": "^0.28.1",
     "drizzle-orm": "^0.36.3",
     "nanoid": "^5.0.8",
-    "thememirror": "^2.0.1",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.10",
     "wrangler": "^3.89.0"

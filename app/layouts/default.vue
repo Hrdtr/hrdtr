@@ -100,10 +100,6 @@ const dark = computed({
 </template>
 
 <style lang="postcss">
-:root {
-  @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200;
-}
-
 .router-link-exact-active {
   @apply opacity-100;
 }

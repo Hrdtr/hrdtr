@@ -303,7 +303,7 @@ const loadExtensions = async () => {
     }),
     props.theme
       ? EditorView.theme(props.theme, { dark: props.dark })
-      : await import('thememirror').then(m => m.dracula),
+      : await import('./code-mirror/theme').then(m => m.default),
 
     ...[
       // Toggle line wrapping
@@ -332,7 +332,7 @@ const loadExtensions = async () => {
       props.linter && props.gutter ? lintGutter(props.gutterConfig) : undefined,
       // Placeholder
       props.placeholder ? placeholder(props.placeholder) : undefined,
-    ].filter(ext => ext !== undefined),
+    ].filter(extension => extension !== undefined),
 
     // Append Extensions
     ...(props.extensions ?? []),
