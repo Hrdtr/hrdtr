@@ -42,6 +42,17 @@ const dark = computed({
               About
             </NuxtLink>
             <NuxtLink
+              class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
+              to="/resume/"
+              target="_blank"
+            >
+              Resume
+              <Icon
+                name="heroicons:arrow-top-right-on-square"
+                class="ml-2 opacity-75"
+              />
+            </NuxtLink>
+            <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity"
               to="/projects/"
             >
@@ -65,10 +76,10 @@ const dark = computed({
             />
             <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
-              to="/resume/"
+              to="/play/js"
               target="_blank"
             >
-              Resume
+              Play
               <Icon
                 name="heroicons:arrow-top-right-on-square"
                 class="ml-2 opacity-75"
