@@ -12,8 +12,6 @@ const code = ref(route.query.code && typeof route.query.code === 'string'
   ? JSON.parse(decompressFromEncodedURIComponent(route.query.code))
   : {
       js: `import { ofetch } from 'https://esm.sh/ofetch'\n\nconst res = await ofetch('https://jsonplaceholder.typicode.com/todos/1')\nconsole.log(res)\n`,
-      html: '',
-      css: '',
     })
 const codeSnapshot = ref({ ...code.value })
 const consoleOutput = ref<string>('')
