@@ -570,7 +570,7 @@ defineExpose({
   <component
     :is="props.tag ?? 'div'"
     ref="editorRef"
-    class="w-full h-full [&>.cm-editor]:w-full [&>.cm-editor]:h-full"
+    class="cm-wrapper w-full h-full [&>.cm-editor]:w-full [&>.cm-editor]:h-full"
   >
     <aside
       v-if="slots.default"

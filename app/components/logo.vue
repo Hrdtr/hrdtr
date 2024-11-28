@@ -52,15 +52,19 @@
 }
 
 #p1 {
-  -webkit-animation: 1.125s ease-in-out forwards dash,
+  -webkit-animation:
+    1.125s ease-in-out forwards dash,
     0.35s ease-in 1.125s forwards fill;
-  animation: 1.125s ease-in-out forwards dash,
+  animation:
+    1.125s ease-in-out forwards dash,
     0.35s ease-in 1.125s forwards fill;
 }
 #p2 {
-  -webkit-animation: 1.125s ease-in-out forwards dash,
+  -webkit-animation:
+    1.125s ease-in-out forwards dash,
     0.35s ease-in 1.125s forwards fill;
-  animation: 1.125s ease-in-out forwards dash,
+  animation:
+    1.125s ease-in-out forwards dash,
     0.35s ease-in 1.125s forwards fill;
 }
 

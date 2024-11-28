@@ -11,9 +11,9 @@ const iframeEl = useTemplateRef('iframeElRef')
 const code = ref(route.query.code && typeof route.query.code === 'string'
   ? JSON.parse(decompressFromEncodedURIComponent(route.query.code))
   : {
-      js: `import { ofetch } from 'https://esm.sh/ofetch'\n\nconst res = await ofetch('https://jsonplaceholder.typicode.com/todos/1')\nconsole.log(res)\n`,
-      html: '',
+      html: '<p style="font-size: 1.5rem; font-weight: bold;">Hello World!</p>',
       css: '',
+      js: ``,
     })
 const codeSnapshot = ref({ ...code.value })
 const consoleOutput = ref<string>('')
@@ -206,8 +206,8 @@ useEventListener('message', async (event) => {
   }
 })
 
-const editorTab = ref('js')
-const outputTab = ref('consoleOutput')
+const editorTab = ref('html')
+const outputTab = ref('documentPreview')
 
 const hideEditorView = ref(false)
 // const hideOutputView = ref(false)
@@ -236,6 +236,28 @@ const share = async () => {
             tabindex="-1"
             dir="ltr"
           >
+            <button
+              class="px-2 py-1 flex-shrink-0 text-sm rounded transition inline-flex items-center"
+              :class="editorTab === 'html' ? 'bg-background-content/10' : 'bg-background-content/5 hover:bg-background-content/10 opacity-65 hover:opacity-100'"
+              type="button"
+              role="tab"
+              tabindex="0"
+              :aria-selected="editorTab === 'html'"
+              @click="editorTab = 'html'"
+            >
+              HTML
+            </button>
+            <button
+              class="px-2 py-1 flex-shrink-0 text-sm rounded transition inline-flex items-center"
+              :class="editorTab === 'css' ? 'bg-background-content/10' : 'bg-background-content/5 hover:bg-background-content/10 opacity-65 hover:opacity-100'"
+              type="button"
+              role="tab"
+              tabindex="0"
+              :aria-selected="editorTab === 'css'"
+              @click="editorTab = 'css'"
+            >
+              CSS
+            </button>
             <button
               class="px-2 py-1 flex-shrink-0 text-sm rounded transition inline-flex items-center"
               :class="editorTab === 'js' ? 'bg-background-content/10' : 'bg-background-content/5 hover:bg-background-content/10 opacity-65 hover:opacity-100'"
@@ -278,8 +300,21 @@ const share = async () => {
 
       <div class="flex-shrink-0 flex-1 overflow-y-auto [&_.cm-wrapper]:max-w-[100dvw]">
         <CodeMirror
+          v-if="editorTab === 'js'"
           v-model="code.js"
           :lang="() => import('@codemirror/lang-javascript').then(m => m.javascript())"
+          @ready="({ view }) => view.focus()"
+        />
+        <CodeMirror
+          v-if="editorTab === 'html'"
+          v-model="code.html"
+          :lang="() => import('@codemirror/lang-html').then(m => m.html())"
+          @ready="({ view }) => view.focus()"
+        />
+        <CodeMirror
+          v-if="editorTab === 'css'"
+          v-model="code.css"
+          :lang="() => import('@codemirror/lang-css').then(m => m.css())"
           @ready="({ view }) => view.focus()"
         />
       </div>
@@ -295,6 +330,17 @@ const share = async () => {
             tabindex="-1"
             dir="ltr"
           >
+            <button
+              class="px-2 py-1 flex-shrink-0 text-sm rounded transition inline-flex items-center"
+              :class="outputTab === 'documentPreview' ? 'bg-background-content/10' : 'bg-background-content/5 hover:bg-background-content/10 opacity-65 hover:opacity-100'"
+              type="button"
+              role="tab"
+              tabindex="0"
+              :aria-selected="outputTab === 'documentPreview'"
+              @click="outputTab = 'documentPreview'"
+            >
+              Preview
+            </button>
             <button
               class="px-2 py-1 flex-shrink-0 text-sm rounded transition inline-flex items-center"
               :class="outputTab === 'consoleOutput' ? 'bg-background-content/10' : 'bg-background-content/5 hover:bg-background-content/10 opacity-65 hover:opacity-100'"
@@ -355,7 +401,7 @@ const share = async () => {
           ref="iframeElRef"
           :key="runKey"
           :srcdoc="srcdoc"
-          class="hidden"
+          :class="outputTab === 'documentPreview' ? 'w-full h-full bg-white rounded' : 'hidden'"
           sandbox="allow-scripts allow-same-origin"
         />
       </div>
