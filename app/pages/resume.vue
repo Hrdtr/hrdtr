@@ -9,7 +9,7 @@ useSeoMeta({
 const works = [
   {
     company: 'AM Collective',
-    title: 'Techical Lead Lead',
+    title: 'Technical Lead',
     dates: 'Aug 2022 - Present',
     description: 'I am responsible for planning, managing, and executing both client and in-house technology projects. My role involves overseeing the entire project lifecycle—from initial concept to final delivery—while ensuring adherence to timelines, budget constraints, and quality standards. I collaborate closely with cross-functional teams to align technical solutions with business goals and drive the successful implementation of innovative, scalable, and efficient systems.',
   },
