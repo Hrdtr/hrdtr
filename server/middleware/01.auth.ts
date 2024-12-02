@@ -9,7 +9,11 @@ export type AuthState = {
 }
 
 export default defineEventHandler(async (event) => {
-  if (import.meta.prerender) return
+  // This need to be placed on top to prevent build fails
+  if (import.meta.prerender || !event.path.startsWith('/api/_hub')) {
+    event.context.auth = { session: null, user: null }
+    return
+  }
 
   const token = getCookie(event, sessionTokenCookieName) ?? null
   if (!token) {
