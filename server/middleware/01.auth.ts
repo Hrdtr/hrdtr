@@ -9,6 +9,8 @@ export type AuthState = {
 }
 
 export default defineEventHandler(async (event) => {
+  if (import.meta.prerender) return
+
   const token = getCookie(event, sessionTokenCookieName) ?? null
   if (!token) {
     event.context.auth = { session: null, user: null }
