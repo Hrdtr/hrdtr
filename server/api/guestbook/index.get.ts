@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
   const total = await db.select({ count: count() })
     .from(schema.guestbook)
-    .then(result => result[0].count)
+    .then(result => result[0]!.count)
 
   const data = await db.query.guestbook.findMany({
     orderBy: (guestbook, { desc }) => [desc(guestbook.createdAt)],

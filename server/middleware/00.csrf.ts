@@ -1,10 +1,10 @@
 import { defineEventHandler, getHeader, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  if (import.meta.prerender) return
+  if (import.meta.prerender || event.path.startsWith('/api/content') || event.path.startsWith('/api/_hub')) return
 
   // CSRF protection. Only required in non-GET requests (POST, PUT, DELETE, PATCH, etc)
-  if (event.method !== 'GET' && !event.path.startsWith('/api/_hub')) {
+  if (event.method !== 'GET') {
     const originHeader = getHeader(event, 'Origin') ?? null
     const hostHeader = getHeader(event, 'Host') ?? null
     if (!originHeader || !hostHeader || !verifyRequestOrigin(originHeader, [hostHeader])) {

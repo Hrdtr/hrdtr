@@ -2,6 +2,8 @@
 useSeoMeta({
   title: 'Blog',
 })
+
+const { data: contents } = await useAsyncData(() => queryCollection('blog').where('published_at', 'IS NOT NULL').select('title', 'path', 'published_at').all())
 </script>
 
 <template>
@@ -10,29 +12,19 @@ useSeoMeta({
       Blog
     </h1>
 
-    <ContentList
-      path="/blog"
-      :query="{ limit: 99, sort: [{ published_at: -1 }] }"
+    <div
+      v-for="article in contents"
+      :key="article.path"
+      class="mb-4"
     >
-      <template #default="{ list }">
-        <div
-          v-for="article in list"
-          :key="article._path"
-          class="mb-4"
-        >
-          <NuxtLink
-            :to="`${article._path}/`"
-            class="group"
-          >
-            <h2 class="text-lg opacity-90 group-hover:opacity-100">
-              {{ article.title }} <span class="opacity-60 text-sm leading-none">{{ new Date(article.published_at).toLocaleDateString() }}</span>
-            </h2>
-          </NuxtLink>
-        </div>
-      </template>
-      <template #not-found>
-        <p>No articles found.</p>
-      </template>
-    </ContentList>
+      <NuxtLink
+        :to="`${article.path}/`"
+        class="group"
+      >
+        <h2 class="text-lg opacity-90 group-hover:opacity-100">
+          {{ article.title }} <span class="opacity-60 text-sm leading-none">{{ new Date(article.published_at!).toLocaleDateString() }}</span>
+        </h2>
+      </NuxtLink>
+    </div>
   </div>
 </template>

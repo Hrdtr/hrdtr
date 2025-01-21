@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
     if (existingUser) {
       const sessionToken = createSessionToken()
       const session = await createSession(event, sessionToken, existingUser)
-      setSessionTokenCookie(event, sessionToken, session)
+      setSessionTokenCookie(event, sessionToken, session!)
       deleteCookie(event, 'redirected_from')
       deleteCookie(event, 'github_oauth_state')
       return sendRedirect(event, redirectPath ?? '/')
@@ -47,7 +47,7 @@ export default defineEventHandler(async (event) => {
 
     const sessionToken = createSessionToken()
     const session = await createSession(event, sessionToken, { id: userId })
-    setSessionTokenCookie(event, sessionToken, session)
+    setSessionTokenCookie(event, sessionToken, session!)
     deleteCookie(event, 'redirected_from')
     deleteCookie(event, 'github_oauth_state')
     return sendRedirect(event, redirectPath ?? '/')

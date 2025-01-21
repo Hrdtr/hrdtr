@@ -1,11 +1,9 @@
-import { asSitemapUrl, defineSitemapEventHandler } from '#imports'
-import { serverQueryContent } from '#content/server'
-
 export default defineSitemapEventHandler(async (event) => {
-  const blog = await serverQueryContent(event, '/blog').find()
+  // @ts-expect-error typecheck unexpected error
+  const blog = await queryCollection(event, 'blog').all()
 
   return blog.map(item => asSitemapUrl({
-    loc: item._path,
+    loc: item.path,
     changefreq: 'monthly',
   }))
 })

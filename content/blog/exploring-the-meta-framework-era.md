@@ -1,9 +1,8 @@
 ---
 title: "Exploring the Meta-Framework Era"
 description: Empowering Web Development with Framework-Specific Solutions
-published: true
 published_at: '2023-04-20'
-tags: vue, nuxt, react, nextjs, solidstart, qwik-city, sveltekit
+tags: [vue, nuxt, react, nextjs, solidstart, qwik-city, sveltekit]
 cover_image:
 ---
 

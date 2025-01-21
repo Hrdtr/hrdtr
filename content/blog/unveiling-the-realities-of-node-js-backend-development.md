@@ -1,9 +1,8 @@
 ---
 title: Unveiling the Realities of Node.js Backend Development
 description: Embarking on a Node.js backend development journey has exposed me to a range of challenges that tested my skills and problem-solving abilities
-published: true
 published_at: '2023-06-02'
-tags: nodejs, javascript, typescript
+tags: [nodejs, javascript, typescript]
 cover_image: https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg
 ---
 

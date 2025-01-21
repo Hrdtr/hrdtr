@@ -28,11 +28,11 @@ export default defineNuxtConfig({
   },
   nitro: {
     experimental: {
-      // See: https://github.com/nuxt/content/issues/2839
-      // openAPI: true,
+      openAPI: true,
     },
   },
   modules: [
+    '@nuxtjs/seo', // Need to be registered first in order to make content module work properly
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -40,10 +40,15 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/color-mode',
-    '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
   ],
+  content: {
+    database: {
+      type: 'd1',
+      binding: 'DB',
+    },
+  },
   eslint: {
     config: {
       stylistic: true,

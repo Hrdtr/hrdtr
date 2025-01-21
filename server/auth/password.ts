@@ -28,7 +28,7 @@ export async function hashPassword(password: string, { salt: providedSalt }: { s
 
 export async function verifyPasswordHash(hashedPassword: string, password: string): Promise<boolean> {
   const [saltHex, originalHash] = hashedPassword.split(':')
-  const matchResult = saltHex.match(/.{1,2}/g)
+  const matchResult = saltHex!.match(/.{1,2}/g)
   if (!matchResult) {
     throw new Error('Invalid salt format')
   }

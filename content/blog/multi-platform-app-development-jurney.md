@@ -1,9 +1,8 @@
 ---
 title: A Journey in Multi-Platform App Development
 description: Honest Perspectives on Apache Cordova, Ionic + Capacitor, React Native + Expo
-published: true
 published_at: '2023-02-18'
-tags: react-native, expo, capacitor, ionic, cordova
+tags: [react-native, expo, capacitor, ionic, cordova]
 cover_image: /blog/multi-platform-app-development-jurney/media/featured-image.jpg
 ---
 
