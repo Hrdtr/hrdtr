@@ -26,18 +26,32 @@ const { data: doc } = await useAsyncData(route.path, () => {
         <h2 class="mt-10 mb-2">
           Visuals
         </h2>
-        <ExpandableGalery
-          :images="[...(doc.cover_image ? [doc.cover_image] : []), ...(doc.visuals ? doc.visuals : [])]"
-          :img="{
-            alt: (_, idx) => `${doc?.path}-visuals-${idx}`,
-            class: 'object-cover object-center rounded border border-zinc-200 dark:border-zinc-800',
-            format: 'webp',
-            height: '400px',
-            fit: 'contain',
-            loading: 'lazy',
-            placeholder: true,
-          }"
-        />
+        <div class="flex flex-row items-center overflow-x-auto pb-4 gap-4">
+          <template v-if="doc.cover_image">
+            <NuxtImg
+              :src="doc.cover_image"
+              :alt="`${doc.path}-cover`"
+              class="flex-shrink-0 w-auto h-[400px] object-contain object-center border border-neutral-200 dark:border-neutral-800"
+              format="webp"
+              height="400px"
+              fit="contain"
+              loading="lazy"
+              placeholder
+            />
+          </template>
+          <NuxtImg
+            v-for="(visual, i) in doc.visuals"
+            :key="visual"
+            :src="visual"
+            :alt="`${doc.path}-visual-${i + 1}`"
+            class="flex-shrink-0 w-auto h-[400px] object-contain object-center border border-zinc-200 dark:border-zinc-800"
+            format="webp"
+            height="400px"
+            fit="contain"
+            loading="lazy"
+            placeholder
+          />
+        </div>
       </div>
     </template>
     <template v-if="doc.tech">
@@ -58,7 +72,7 @@ const { data: doc } = await useAsyncData(route.path, () => {
             >
             <div
               v-else
-              class="h-[24px] bg-zinc-200 dark:bg-zinc-800 text-[0.60rem] leading-none tracking-wider uppercase font-ssemibold px-2 flex items-center justify-center"
+              class="h-[24px] bg-zinc-200 dark:bg-zinc-800 text-[0.60rem] leading-none tracking-wider uppercase font-semibold px-2 flex items-center justify-center"
             >
               {{ tech.split(': ')[0] }}
             </div>
