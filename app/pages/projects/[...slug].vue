@@ -31,7 +31,7 @@ const { data: doc } = await useAsyncData(route.path, () => {
             <NuxtImg
               :src="doc.cover_image"
               :alt="`${doc.path}-cover`"
-              class="flex-shrink-0 w-auto h-[400px] object-contain object-center border border-neutral-200 dark:border-neutral-800"
+              class="flex-shrink-0 min-w-max h-[400px] object-contain object-center border border-neutral-200 dark:border-neutral-800"
               format="webp"
               height="400px"
               fit="contain"
@@ -44,7 +44,7 @@ const { data: doc } = await useAsyncData(route.path, () => {
             :key="visual"
             :src="visual"
             :alt="`${doc.path}-visual-${i + 1}`"
-            class="flex-shrink-0 w-auto h-[400px] object-contain object-center border border-zinc-200 dark:border-zinc-800"
+            class="flex-shrink-0 min-w-max h-[400px] object-contain object-center border border-zinc-200 dark:border-zinc-800"
             format="webp"
             height="400px"
             fit="contain"
