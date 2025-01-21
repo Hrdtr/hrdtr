@@ -10,7 +10,7 @@ const dark = computed({
 </script>
 
 <template>
-  <div class="w-full min-h-dvh relative">
+  <div class="w-full min-h-dvh relative selection:bg-teal-200 dark:selection:bg-teal-800">
     <NuxtImg
       src="/background.webp"
       alt=""

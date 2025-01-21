@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
-
   runtimeConfig: {
     public: {
       app: {
@@ -17,7 +16,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   app: {
     layoutTransition: {
       name: 'layout',
@@ -28,13 +26,11 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
-
   nitro: {
     experimental: {
       openAPI: true,
     },
   },
-
   modules: [
     '@nuxtjs/seo', // Need to be registered first in order to make content module work properly
     '@nuxt/content',
@@ -47,21 +43,18 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
   ],
-
   content: {
     database: {
       type: 'd1',
       binding: 'DB',
     },
   },
-
   eslint: {
     config: {
       stylistic: true,
       formatters: true,
     },
   },
-
   image: {
     domains: [
       'github.com',
@@ -69,22 +62,18 @@ export default defineNuxtConfig({
       'img.shields.io',
     ],
   },
-
   hub: {
     analytics: true,
     cache: true,
     database: true,
   },
-
   colorMode: {
     classSuffix: '',
   },
-
   // @nuxtjs/seo
   ogImage: {
     enabled: false,
   },
-
   site: {
     url: 'https://www.hrdtr.dev',
     name: 'Herdi Tr.',
@@ -96,7 +85,6 @@ export default defineNuxtConfig({
     twitter: '@hrdtr_',
     trailingSlash: true,
   },
-
   sitemap: {
     sitemaps: {
       pages: {
@@ -114,6 +102,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  compatibilityDate: '2025-01-21',
 })

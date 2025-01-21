@@ -43,7 +43,4 @@
 .prose h6 > a {
   text-decoration-line: none;
 }
-.prose pre {
-  background-color: transparent;
-}
 </style>
