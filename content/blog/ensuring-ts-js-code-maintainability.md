@@ -1,8 +1,8 @@
 ---
 title: Ensuring Code Maintainability in JavaScript/TypeScript with Modern Frameworks and Libraries
-description: Maintaining code in this dynamic ecosystem can present challenges
-published_at: '2023-03-01'
-tags: [javascript, typescript]
+short_description: Maintaining code in this dynamic ecosystem can present challenges
+published_at: 2023-03-01
+tags: ["javascript", "typescript"]
 cover_image: /blog/ensuring-ts-js-code-maintainability/media/featured-image.jpg
 ---
 

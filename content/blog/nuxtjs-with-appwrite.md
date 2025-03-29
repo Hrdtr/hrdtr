@@ -1,8 +1,8 @@
 ---
 title: NuxtJS with Appwrite
-description: Speed up your development projects by using nuxtjs and appwrite as back-end
-published_at: '2021-08-31'
-tags: [nuxt, vue, appwrite, baas]
+short_description: Speed up your development projects by using nuxtjs and appwrite as back-end
+published_at: 2021-08-31
+tags: ["nuxt", "vue", "appwrite", "baas"]
 cover_image: https://github.com/Hrdtr/nuxt-appwrite/blob/main/docs/static/cover.jpg?raw=true
 ---
 

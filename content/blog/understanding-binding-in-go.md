@@ -1,8 +1,8 @@
 ---
 title: "Understanding Binding in Go: Mapping Data to Structs"
-description: In Go programming, binding plays a significant role in mapping data from external sources to struct fields
-published_at: '2023-03-12'
-tags: [golang]
+short_description: In Go programming, binding plays a significant role in mapping data from external sources to struct fields
+published_at: 2023-03-12
+tags: ["golang"]
 cover_image: /blog/understanding-binding-in-go/media/featured-image.webp
 ---
 

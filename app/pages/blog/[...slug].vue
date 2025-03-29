@@ -17,7 +17,7 @@ const { data: doc } = await useAsyncData(route.path, () => {
       </h1>
       <span class="opacity-60">{{ new Date(doc.published_at!).toDateString() }}</span>
     </div>
-    <template v-if="doc.cover_image">
+    <template v-if="doc.cover_image && doc.cover_image.trim() !== '-'">
       <div class="not-prose w-full">
         <NuxtImg
           :src="doc.cover_image"

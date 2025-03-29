@@ -8,7 +8,7 @@ export default defineContentConfig({
       // Define custom schema for docs collection
       schema: z.object({
         title: z.string(),
-        description: z.string(),
+        short_description: z.string(),
         published_at: z.string().date().nullable(),
         tags: z.array(z.string()),
         cover_image: z.string().nullable(),

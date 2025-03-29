@@ -1,9 +1,9 @@
 ---
 title: "Exploring the Meta-Framework Era"
 description: Empowering Web Development with Framework-Specific Solutions
-published_at: '2023-04-20'
-tags: [vue, nuxt, react, nextjs, solidstart, qwik-city, sveltekit]
-cover_image:
+published_at: 2023-04-20
+tags: ["vue", "nuxt", "react", "nextjs", "solidstart", "qwik-city", "sveltekit"]
+cover_image: -
 ---
 
 In the fast-paced world of web development, frameworks play a crucial role in building robust and efficient applications. However, as frameworks evolve, a new trend has emerged—the rise of meta-frameworks. These meta-frameworks provide additional layers of functionality and tooling on top of popular frameworks, enhancing development workflows and empowering developers to build complex applications more efficiently. In this article, we'll explore the meta-framework era and highlight some notable examples, such as Nuxt, Next, Qwik City, Solid Start, SvelteKit, and more.
