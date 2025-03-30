@@ -3,7 +3,7 @@ useSeoMeta({
   title: 'Blog',
 })
 
-const { data: contents } = await useAsyncData(() => queryCollection('blog').where('published_at', 'IS NOT NULL').select('title', 'path', 'published_at').order('published_at', 'DESC').all())
+const { data: contents } = await useAsyncData('blog', () => queryCollection('blog').where('published_at', 'IS NOT NULL').select('title', 'path', 'published_at').order('published_at', 'DESC').all())
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 import { defineEventHandler, getHeader, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  if (import.meta.prerender || event.path.startsWith('/api/content') || event.path.startsWith('/api/_hub')) return
+  if (import.meta.prerender || ['/__nuxt_content', '/api/content', '/api/_hub'].some(path => event.path.startsWith(path))) return
 
   // CSRF protection. Only required in non-GET requests (POST, PUT, DELETE, PATCH, etc)
   if (event.method !== 'GET') {

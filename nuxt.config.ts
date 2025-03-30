@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
+  future: { compatibilityVersion: 4 },
+  compatibilityDate: '2025-03-30',
+  experimental: {
+    asyncContext: true,
+  },
 
   runtimeConfig: {
     public: {
@@ -51,7 +55,7 @@ export default defineNuxtConfig({
   content: {
     database: {
       type: 'd1',
-      binding: 'DB',
+      bindingName: 'DB',
     },
   },
 
@@ -114,6 +118,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  compatibilityDate: '2025-03-30',
 })

@@ -10,7 +10,7 @@ export type AuthState = {
 
 export default defineEventHandler(async (event) => {
   // This need to be placed on top to prevent build fails
-  if (import.meta.prerender || event.path.startsWith('/api/content') || event.path.startsWith('/api/_hub')) {
+  if (import.meta.prerender || ['/__nuxt_content', '/api/content', '/api/_hub'].some(path => event.path.startsWith(path))) {
     event.context.auth = { session: null, user: null }
     return
   }
