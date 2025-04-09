@@ -52,12 +52,12 @@ const dark = computed({
                 class="ml-2 opacity-75"
               />
             </NuxtLink>
-            <NuxtLink
+            <!-- <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity"
               to="/projects/"
             >
               Projects
-            </NuxtLink>
+            </NuxtLink> -->
             <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity"
               to="/blog/"
