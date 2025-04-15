@@ -35,13 +35,4 @@
   opacity: 0;
   transform: translateY(-1rem);
 }
-
-.prose h1 > a,
-.prose h2 > a,
-.prose h3 > a,
-.prose h4 > a,
-.prose h5 > a,
-.prose h6 > a {
-  text-decoration-line: none;
-}
 </style>

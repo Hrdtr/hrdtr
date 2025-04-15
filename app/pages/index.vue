@@ -1,13 +1,20 @@
 <template>
   <div class="flex-1">
     <h1 class="text-3xl font-semibold ml-[-1.25px]">
-      <span>Herdi Tr.</span><br><span class="opacity-60 font-medium">Software Engineer</span>
+      <span>Herdi Tr.</span><!-- <br><span class="opacity-60 font-medium">Software Engineer</span> -->
     </h1>
-    <p class="opacity-90 mt-6">
-      Hey, I'm Herdi. Skilled at transforming ideas into impactful code. Adept at designing
-      robust solutions and optimizing performance. Passionate about pushing
-      boundaries in the ever-evolving tech landscape.
-    </p>
+    <div class="text-3xl ml-[-1.25px] opacity-60 font-thin">
+      <FlipWords
+        :words="['Software Engineer', 'Tech Enthusiast', 'Code Crafter', 'Problem Solver']"
+        :duration="3000"
+      />
+    </div>
+
+    <div class="prose dark:prose-invert mt-6">
+      <p>
+        Hey, I’m a software engineer who’s addicted to crafting clean, efficient, and genuinely useful things. I thrive in that sweet spot where design meets logic — building intuitive UIs, optimizing systems under the hood, and solving gnarly technical puzzles that others shy away from.
+      </p>
+    </div>
 
     <NuxtImg
       src="/avatar.webp"
@@ -20,7 +27,7 @@
     <h2 class="mt-12 mb-2">
       Let's Connect
     </h2>
-    <div class="flex flex-row items-center gap-4 [&_a]:border-b [&_a]:border-neutral-500/50 hover:[&_a]:border-teal-500 [&_a]:transition-colors">
+    <div class="flex flex-row items-center gap-4 [&_a]:border-b [&_a]:border-transparent hover:[&_a]:border-background-content [&_a]:transition-colors [&_a]:duration-300">
       <NuxtLink
         target="_blank"
         external

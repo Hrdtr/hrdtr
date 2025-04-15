@@ -3,7 +3,23 @@ useSeoMeta({
   title: 'Blog',
 })
 
-const { data: contents } = await useAsyncData('blog', () => queryCollection('blog').where('published_at', 'IS NOT NULL').select('title', 'path', 'published_at').order('published_at', 'DESC').all())
+const { data: contents } = await useAsyncData('blog', () => queryCollection('blog')
+  .where('published_at', 'IS NOT NULL')
+  .select('title', 'path', 'published_at', 'description')
+  .order('published_at', 'DESC')
+  .all(),
+)
+
+const groupedByYear = computed(() => {
+  if (!contents.value) return {}
+
+  return contents.value.reduce((acc, article) => {
+    const year = new Date(article.published_at!).getFullYear()
+    if (!acc[year]) acc[year] = []
+    acc[year].push(article)
+    return acc
+  }, {} as Record<number, typeof contents.value>)
+})
 </script>
 
 <template>
@@ -13,18 +29,34 @@ const { data: contents } = await useAsyncData('blog', () => queryCollection('blo
     </h1>
 
     <div
-      v-for="article in contents"
-      :key="article.path"
-      class="mb-4"
+      v-for="[year, articles] in Object.entries(groupedByYear).sort((a, b) => Number(b[0]) - Number(a[0]))"
+      :key="year"
+      class="mb-10"
     >
-      <NuxtLink
-        :to="`${article.path}/`"
-        class="group"
+      <h2 class="text-7xl font-bold mb-4 opacity-20 -ml-0.5">
+        {{ year }}
+      </h2>
+
+      <div
+        v-for="article in articles"
+        :key="article.path"
+        class="mb-6"
       >
-        <h2 class="text-lg opacity-90 group-hover:opacity-100">
-          {{ article.title }} <span class="opacity-60 text-sm leading-none">{{ new Date(article.published_at!).toLocaleDateString() }}</span>
-        </h2>
-      </NuxtLink>
+        <NuxtLink
+          :to="`${article.path}/`"
+          class="group"
+        >
+          <h3 class="text-lg opacity-90 group-hover:opacity-100 transition font-medium">
+            {{ article.title }}
+          </h3>
+          <span class="text-background-content-muted text-sm leading-none">
+            — {{ new Date(article.published_at!).toDateString().replace(year, '').trim() }}
+          </span>
+          <!-- <p class="opacity-60 group-hover:opacity-80 line-clamp-2 mt-1 transition">
+            {{ article.description }}
+          </p> -->
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

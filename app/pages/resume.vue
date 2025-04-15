@@ -94,54 +94,53 @@ const awards = [
 ]
 
 const skills = [
-  'https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white: Github Actions',
-  'https://img.shields.io/badge/circle%20ci-%23161616.svg?style=flat&logo=circleci&logoColor=white: Circle CI',
-  'https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=flat&logo=gitlab&logoColor=white: Gitlab CI',
+  'https://img.shields.io/badge/Github%20Actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white: Github Actions',
+  'https://img.shields.io/badge/Gitlab%20CI-%23181717.svg?style=flat&logo=gitlab&logoColor=white: Gitlab CI',
   'https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white: Firebase',
   'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white: MongoDB',
-  'https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white: PostgreSQl',
-  'https://img.shields.io/badge/redis-%23DD0031.svg?style=flat&logo=redis&logoColor=white: Redis',
+  'https://img.shields.io/badge/Postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white: PostgreSQl',
+  'https://img.shields.io/badge/Redis-%23DD0031.svg?style=flat&logo=redis&logoColor=white: Redis',
   'https://img.shields.io/badge/SurrealDB-FF00A0?style=flat&logo=surrealdb&logoColor=white: SurrealDB',
-  'https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=flat&logo=Adobe%20Creative%20Cloud&logoColor=white: Adobe Creative Cloud',
-  'https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=flat&logo=affinity-designer&logoColor=white: Affinity Designer',
-  'https://img.shields.io/badge/affinityphoto-%237E4DD2.svg?style=flat&logo=affinity-photo&logoColor=white: Affinity Photo',
-  'https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white: Figma',
+  'https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=flat&logo=adobe-creative-cloud&logoColor=white: Adobe Creative Cloud',
+  'https://img.shields.io/badge/Affinity%20Designer-%231B72BE.svg?style=flat&logo=affinity-designer&logoColor=white: Affinity Designer',
+  'https://img.shields.io/badge/Affinity%20Photo-%237E4DD2.svg?style=flat&logo=affinity-photo&logoColor=white: Affinity Photo',
+  'https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white: Figma',
   'https://img.shields.io/badge/Sketch-FFB387?style=flat&logo=sketch&logoColor=black: Sketch',
-  'https://img.shields.io/badge/deno%20js-000000?style=flat&logo=deno&logoColor=white: Deno',
+  'https://img.shields.io/badge/Deno%20js-000000?style=flat&logo=deno&logoColor=white: Deno',
   'https://img.shields.io/badge/Electron-191970?style=flat&logo=Electron&logoColor=white: Electron.JS',
-  'https://img.shields.io/badge/expo-1C1E24?style=flat&logo=expo&logoColor=#D04A37: Expo',
-  'https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB: Express.JS',
-  'https://img.shields.io/badge/fastify-%23000000.svg?style=flat&logo=fastify&logoColor=white: Fastify',
+  'https://img.shields.io/badge/Expo-1C1E24?style=flat&logo=expo&logoColor=#D04A37: Expo',
+  'https://img.shields.io/badge/Express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB: Express.JS',
+  'https://img.shields.io/badge/Fastify-%23000000.svg?style=flat&logo=fastify&logoColor=white: Fastify',
   'https://img.shields.io/badge/Ionic-%233880FF.svg?style=flat&logo=Ionic&logoColor=white: Ionic',
   'https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=white: NextJS',
-  'https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white: NodeJS',
+  'https://img.shields.io/badge/Node.js-6DA55F?style=flat&logo=node.js&logoColor=white: NodeJS',
   'https://img.shields.io/badge/Nuxt-002E3B?style=flat&logo=nuxtdotjs&logoColor=#00DC82: Nuxt',
-  'https://img.shields.io/badge/nx-143055?style=flat&logo=nx&logoColor=white: NX',
+  'https://img.shields.io/badge/Nx-143055?style=flat&logo=nx&logoColor=white: NX',
   'https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=flat&logo=pnpm&logoColor=f69220: PNPM',
-  'https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB: React',
-  'https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB): React Native',
+  'https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB: React',
+  'https://img.shields.io/badge/React%20Native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB): React Native',
   'https://img.shields.io/badge/Socket.io-black?style=flat&logo=socket.io&badgeColor=010101: Socket.IO',
-  'https://img.shields.io/badge/svelte-%23f1413d.svg?style=flat&logo=svelte&logoColor=white: Svelte',
-  'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white: TailwindCSS',
-  'https://img.shields.io/badge/tauri-%2324C8DB.svg?style=flat&logo=tauri&logoColor=%23FFFFFF: Tauri',
-  'https://img.shields.io/badge/unocss-333333.svg?style=flat&logo=unocss&logoColor=white: UnoCSS',
-  'https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white: Vite',
-  'https://img.shields.io/badge/vuejs-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D: VueJS',
-  'https://img.shields.io/badge/webpack-%238DD6F9.svg?style=flat&logo=webpack&logoColor=black: Webpack',
+  'https://img.shields.io/badge/Svelte-%23f1413d.svg?style=flat&logo=svelte&logoColor=white: Svelte',
+  'https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white: TailwindCSS',
+  'https://img.shields.io/badge/Tauri-%2324C8DB.svg?style=flat&logo=tauri&logoColor=%23FFFFFF: Tauri',
+  'https://img.shields.io/badge/UnoCSS-333333.svg?style=flat&logo=unocss&logoColor=white: UnoCSS',
+  'https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white: Vite',
+  'https://img.shields.io/badge/VueJS-%2335495e.svg?style=flat&logo=vuedotjs&logoColor=%234FC08D: VueJS',
+  'https://img.shields.io/badge/Webpack-%238DD6F9.svg?style=flat&logo=webpack&logoColor=black: Webpack',
   'https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white: AWS',
   'https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=Cloudflare&logoColor=white: Cloudflare',
-  'https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=flat&logo=google-cloud&logoColor=white: Google Cloud',
-  'https://img.shields.io/badge/go-%2300ADD8.svg?style=flat&logo=go&logoColor=white: Golang',
-  'https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E: Javascript',
-  'https://img.shields.io/badge/markdown-%23000000.svg?style=flat&logo=markdown&logoColor=white: Markdown',
-  'https://img.shields.io/badge/rust-%23000000.svg?style=flat&logo=rust&logoColor=white: Rust',
-  'https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white: Shell Script',
-  'https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white: TypeScript',
+  'https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=flat&logo=google-cloud&logoColor=white: Google Cloud',
+  'https://img.shields.io/badge/Go-%2300ADD8.svg?style=flat&logo=go&logoColor=white: Golang',
+  'https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E: Javascript',
+  'https://img.shields.io/badge/Markdown-%23000000.svg?style=flat&logo=markdown&logoColor=white: Markdown',
+  'https://img.shields.io/badge/Rust-%23000000.svg?style=flat&logo=rust&logoColor=white: Rust',
+  'https://img.shields.io/badge/Shell%20Script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white: Shell Script',
+  'https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white: TypeScript',
   'https://img.shields.io/badge/Prisma-3982CE?style=flat&logo=Prisma&logoColor=white: Prisma',
-  'https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white: Docker',
-  'https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white: Kubernetes',
-  'https://img.shields.io/badge/-Swagger-%23Clojure?style=flat&logo=swagger&logoColor=white: Swagger',
-  'https://img.shields.io/badge/nginx-%23009639.svg?style=flat&logo=nginx&logoColor=white: Nginx',
+  'https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white: Docker',
+  'https://img.shields.io/badge/Kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white: Kubernetes',
+  'https://img.shields.io/badge/Swagger-%23Clojure?style=flat&logo=swagger&logoColor=white: Swagger',
+  'https://img.shields.io/badge/Nginx-%23009639.svg?style=flat&logo=nginx&logoColor=white: Nginx',
   'https://img.shields.io/badge/Traefik-00a0c4?style=flat&logo=Traefik&logoColor=f8f3e0: Traefik',
   'https://img.shields.io/badge/Bun-f472b6?style=flat&logo=Bun&logoColor=f8f3e0: Bun',
 ]
@@ -216,14 +215,14 @@ const contacts = [
               <p>
                 {{ work.company }}
               </p>
-              <p class="text-sm opacity-75">
+              <p class="text-sm opacity-75 mt-1">
                 {{ work.dates }}
               </p>
             </td>
             <td>
               <div>
                 <h3>{{ work.title }}</h3>
-                <p class="opacity-75">
+                <p class="opacity-75 mt-0.5">
                   {{ work.description }}
                 </p>
               </div>
@@ -247,14 +246,14 @@ const contacts = [
               <p class="">
                 {{ education.instance }}
               </p>
-              <p class="text-sm opacity-75">
+              <p class="text-sm opacity-75 mt-1">
                 {{ education.dates }}
               </p>
             </td>
             <td>
               <div>
                 <h3>{{ education.title }}</h3>
-                <p class="opacity-75">
+                <p class="opacity-75 mt-0.5">
                   {{ education.description }}
                 </p>
               </div>
@@ -278,14 +277,14 @@ const contacts = [
               <p class="">
                 {{ award.instance }}
               </p>
-              <p class="text-sm opacity-75">
+              <p class="text-sm opacity-75 mt-1">
                 {{ award.dates }}
               </p>
             </td>
             <td>
               <div>
                 <h3>{{ award.title }}</h3>
-                <p class="opacity-75">
+                <p class="opacity-75 mt-0.5">
                   {{ award.event }}
                 </p>
               </div>
