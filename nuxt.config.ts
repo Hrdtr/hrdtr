@@ -81,6 +81,14 @@ export default defineNuxtConfig({
       type: 'd1',
       bindingName: 'DB',
     },
+    build: {
+      markdown: {
+        /* See https://content.nuxt.com/docs/getting-started/configuration#highlight */
+        highlight: {
+          langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'go', 'python'],
+        },
+      },
+    },
   },
 
   eslint: {
