@@ -2,7 +2,7 @@
 title: "TypeScript Goes Native: Microsoft's Bold Move to Go for 10x Performance"
 short_description: "Explore Microsoft's ambitious move to rewrite the TypeScript compiler in Go, aiming for a 10x performance boost. Discover the motivations, architecture, and potential impact of this game-changing decision."
 published_at: 2025-04-02
-cover_image: null
+cover_image: "/blog/typescript-goes-native-microsofts-bold-move-to-go-for-10x-performance/1744002029215-typescript_go_performance.png"
 tags: ["TypeScript", "Go", "Compiler", "Performance", "Corsa", "Microsoft", "Programming Languages"]
 ---
 
