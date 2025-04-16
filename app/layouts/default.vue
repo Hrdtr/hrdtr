@@ -133,7 +133,7 @@ const dark = computed({
 }
 
 .prose a {
-  @apply no-underline border-b border-transparent hover:border-background-content transition-colors duration-300;
+  @apply no-underline text-teal-500 border-b border-transparent hover:border-teal-500 transition-colors duration-300;
 }
 .prose p {
   @apply text-background-content/80;
@@ -144,7 +144,7 @@ const dark = computed({
 .prose h4 > a,
 .prose h5 > a,
 .prose h6 > a {
-  @apply no-underline;
+  @apply no-underline text-background-content border-b-0;
 }
 .prose h1 {
   @apply font-semibold;

@@ -33,7 +33,27 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/': { prerender: true },
+  },
+
   nitro: {
+    // See: https://hub.nuxt.com/docs/recipes/pre-rendering
+    prerender: {
+      routes: ['/blog', '/projects'],
+      crawlLinks: true,
+    },
+    cloudflare: {
+      pages: {
+        routes: {
+          // See: https://hub.nuxt.com/docs/recipes/pre-rendering#cloudflare-100-routes-limit
+          exclude: [
+            '/blog/*',
+            '/projects/*',
+          ],
+        },
+      },
+    },
     experimental: {
       openAPI: true,
     },
