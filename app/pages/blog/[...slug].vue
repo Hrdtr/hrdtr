@@ -5,6 +5,9 @@ const route = useRoute()
 const { data: doc } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path(route.path).first()
 })
+if (doc.value?.description) {
+  useSeoMeta({ description: doc.value.description })
+}
 
 const fullUrl = computed(() => `${runtimeConfig.public.app.baseUrl}${route.path}`)
 
