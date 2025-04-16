@@ -1,9 +1,9 @@
 ---
 title: "Introducing Guantr: A Type-Safe Authorization Library for JavaScript/TypeScript"
-description: Flexible, type-safe JavaScript library for efficient authorization and permission checking. Easily manage permissions, and context-aware access control with minimal overhead and a simple API.
+description: "Flexible, type-safe JavaScript library for efficient authorization and permission checking. Easily manage permissions, and context-aware access control with minimal overhead and a simple API."
 published_at: 2025-04-09
-tags: ["JavaScript", "TypeScript", "Authorization", "AuthZ", "Open Source", "Node.js", "Web Development"]
 cover_image: null
+tags: ["JavaScript", "TypeScript", "Authorization", "AuthZ", "Open Source", "Node.js", "Web Development"]
 ---
 
 Handling permissions and access control is a fundamental part of building almost any web application. Deciding *who* can do *what* with *which* resource can quickly become complex. While working on one of my own projects, I found myself needing a solution that was not only flexible but also highly type-safe, integrating seamlessly with my TypeScript codebase.

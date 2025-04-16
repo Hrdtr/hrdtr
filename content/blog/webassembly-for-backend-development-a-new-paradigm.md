@@ -2,7 +2,7 @@
 title: "WebAssembly for Backend Development: A New Paradigm"
 short_description: "Explores how WebAssembly is emerging as a powerful technology for backend development, offering benefits such as improved performance, enhanced security, and cross-platform compatibility."
 published_at: 2024-06-12
-cover_image: "https://minio.pvt.hrdtr.dev/tmp/1743198669161-wasm_backend_blog"
+cover_image: "/blog/webassembly-for-backend-development-a-new-paradigm/1743198669161-wasm_backend_blog"
 tags: ["WebAssembly", "WASM", "Backend", "Server-Side", "Development", "Performance", "Security"]
 ---
 

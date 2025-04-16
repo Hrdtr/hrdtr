@@ -2,7 +2,7 @@
 title: "Building Globally Distributed Serverless Apps with Deno KV"
 short_description: "Deno KV is a globally distributed key-value database built into the Deno runtime. It offers a compelling option for developers looking to build serverless applications with global reach, strong consistency, and ease of use."
 published_at: 2024-11-02
-cover_image: "https://minio.pvt.hrdtr.dev/tmp/1743200113492-deno-kv-opengraph-minimalist-v1"
+cover_image: "/blog/building-globally-distributed-serverless-apps-with-deno-kv/1743200113492-deno-kv-opengraph-minimalist-v1"
 tags: ["Deno", "Deno KV", "Serverless", "Distributed Applications", "Database"]
 ---
 

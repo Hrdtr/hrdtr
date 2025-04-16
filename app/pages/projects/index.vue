@@ -3,7 +3,11 @@ useSeoMeta({
   title: 'Projects',
 })
 
-const { data: contents } = await useAsyncData(() => queryCollection('projects').select('title', 'description', 'path').all())
+const { data: contents } = await useAsyncData(() => queryCollection('projects')
+  .select('title', 'description', 'path')
+  .all(),
+)
+prerenderRoutes(contents.value?.map(content => `/projects${content.path}`) ?? [])
 </script>
 
 <template>

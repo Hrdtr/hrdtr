@@ -1,9 +1,9 @@
 ---
-title: Universal Persisted Storage for React Native Expo + Next.js SSR
-short_description: Learn to unify state management for React Native and Next.js with Solito, Zustand, and Persist Middleware. Achieve cross-platform consistency effortlessly.
+title: "Universal Persisted Storage for React Native Expo + Next.js SSR"
+short_description: "Learn to unify state management for React Native and Next.js with Solito, Zustand, and Persist Middleware. Achieve cross-platform consistency effortlessly."
 published_at: 2023-02-20
-tags: ["react-native", "expo", "nextjs", "zustand"]
 cover_image: null
+tags: ["react-native", "expo", "nextjs", "zustand"]
 ---
 
 The world of web development is marked by constant innovation, and developers are always on the lookout for tools and libraries that can simplify their workflows and make cross-platform development more efficient. In this article, we'll explore a powerful combination of technologies: React Native Expo, Next.js Server-Side Rendering (SSR), and some handy libraries like Fernando Rojo's Solito and Zustand with Persist Middleware. Together, these technologies enable the creation of cross-platform applications with universal storage capabilities.

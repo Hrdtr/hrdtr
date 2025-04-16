@@ -2,7 +2,7 @@
 title: "To Pointer or Not to Pointer: The Button Cursor Dilemma"
 short_description: "What cursor style should appear when a user hovers over a button. Should it be the classic pointer, or the hand (also known as the 'finger' or 'pointer' cursor in CSS)?"
 published_at: 2024-12-19
-cover_image: "https://minio.pvt.hrdtr.dev/tmp/1743197438573-button_cursor_discussion"
+cover_image: "/blog/to-pointer-or-not-to-pointer-the-button-cursor-dilemma/1743197438573-button_cursor_discussion"
 tags: ["HTML", "CSS", "Button", "Cursor", "UX"]
 ---
 

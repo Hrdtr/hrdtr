@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-03-30',
   experimental: {
     asyncContext: true,
+    inlineRouteRules: true,
   },
 
   runtimeConfig: {
@@ -35,18 +36,22 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/blog': { prerender: true },
+    '/projects': { prerender: true },
+    '/resume': { prerender: true },
   },
 
   nitro: {
-    // See: https://hub.nuxt.com/docs/recipes/pre-rendering
-    prerender: {
-      routes: ['/blog', '/projects'],
-      crawlLinks: true,
-    },
     cloudflare: {
       pages: {
         routes: {
-          // See: https://hub.nuxt.com/docs/recipes/pre-rendering#cloudflare-100-routes-limit
+          /**
+           * Following page's children are dynamically pre-rendered:
+           * /app/pages/blog/index.vue
+           * /app/pages/projects/index.vue
+
+           * See: https://hub.nuxt.com/docs/recipes/pre-rendering#cloudflare-100-routes-limit
+           */
           exclude: [
             '/blog/*',
             '/projects/*',
