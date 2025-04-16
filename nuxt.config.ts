@@ -47,9 +47,9 @@ export default defineNuxtConfig({
         routes: {
           /**
            * Following page's children are dynamically pre-rendered:
-           * /app/pages/blog/index.vue
-           * /app/pages/projects/index.vue
-
+           * app/pages/blog/index.vue
+           * app/pages/projects/index.vue
+           * ---
            * See: https://hub.nuxt.com/docs/recipes/pre-rendering#cloudflare-100-routes-limit
            */
           exclude: [

@@ -81,7 +81,7 @@ const dark = computed({
             />
             <NuxtLink
               class="opacity-60 hover:opacity-100 transition-opacity inline-flex items-center"
-              to="/play/js"
+              to="/play/js/"
               target="_blank"
             >
               Play

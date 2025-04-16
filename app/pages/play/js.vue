@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { compressToEncodedURIComponent, decompressFromEncodedURIComponent } from 'lz-string'
+import lzString from 'lz-string'
 
 definePageMeta({
   layout: 'play',
@@ -9,7 +9,7 @@ const route = useRoute()
 
 const iframeEl = useTemplateRef('iframeElRef')
 const code = ref(route.query.code && typeof route.query.code === 'string'
-  ? JSON.parse(decompressFromEncodedURIComponent(route.query.code))
+  ? JSON.parse(lzString.decompressFromEncodedURIComponent(route.query.code))
   : {
       js: `import { ofetch } from 'https://esm.sh/ofetch'\n\nconst res = await ofetch('https://jsonplaceholder.typicode.com/todos/1')\nconsole.log(res)\n`,
     })
@@ -212,7 +212,7 @@ const hideEditorView = ref(false)
 
 const { copy } = useClipboard()
 const share = async () => {
-  await copy(location.origin + location.pathname + '?code=' + compressToEncodedURIComponent(JSON.stringify(code.value)))
+  await copy(location.origin + location.pathname + '?code=' + lzString.compressToEncodedURIComponent(JSON.stringify(code.value)))
   alert('URL copied to clipboard')
 }
 </script>
