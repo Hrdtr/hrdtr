@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-03-30',
   experimental: {
     asyncContext: true,
-    inlineRouteRules: true,
   },
 
   runtimeConfig: {

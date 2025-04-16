@@ -20,12 +20,12 @@ const mobileNavigationVisible = useState('layout:play:mobileNavigationVisible', 
             {
               name: 'Javascript',
               icon: 'simple-icons:javascript',
-              path: '/play/js',
+              path: '/play/js/',
             },
             {
               name: 'HTML',
               icon: 'simple-icons:html5',
-              path: '/play/html',
+              path: '/play/html/',
             },
           ]"
           :key="item.path"

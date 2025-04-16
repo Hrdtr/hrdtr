@@ -7,7 +7,7 @@ const { data: contents } = await useAsyncData(() => queryCollection('projects')
   .select('title', 'description', 'path')
   .all(),
 )
-prerenderRoutes(contents.value?.map(content => `/projects${content.path}`) ?? [])
+prerenderRoutes(contents.value?.map(content => `${content.path}/`) ?? [])
 </script>
 
 <template>

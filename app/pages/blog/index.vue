@@ -9,7 +9,7 @@ const { data: contents } = await useAsyncData('blog', () => queryCollection('blo
   .order('published_at', 'DESC')
   .all(),
 )
-prerenderRoutes(contents.value?.map(content => `/blog${content.path}`) ?? [])
+prerenderRoutes(contents.value?.map(content => `${content.path}/`) ?? [])
 
 const groupedByYear = computed(() => {
   if (!contents.value) return {}
