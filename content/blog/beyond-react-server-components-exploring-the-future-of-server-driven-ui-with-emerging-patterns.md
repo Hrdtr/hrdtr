@@ -6,8 +6,6 @@ cover_image: "https://www.hrdtr.dev/blog/beyond-react-server-components-explorin
 tags: ["Frontend", "Architecture", "Performance", "JavaScript", "React", "Astro", "Qwik", "HTMX", "Server-Driven UI", "SDUI", "RSC", "Islands Architecture", "Partial Hydration", "Resumability", "View Transitions"]
 ---
 
-# Beyond React Server Components: Exploring the Future of Server-Driven UI with Emerging Patterns
-
 The web development world is in a constant state of flux, always chasing faster load times, smoother interactions, and better developer experiences. For a long time, the pendulum swung heavily towards client-side rendering (CSR) with frameworks like React, Vue, and Angular dominating the landscape. But the weight of large JavaScript bundles and complex client-server data fetching waterfalls started to slow things down, impacting crucial metrics like Time-to-Interactive (TTI).
 
 Enter the resurgence of server-centric thinking, but with a modern twist. React Server Components (RSC) made a huge splash, offering a way to keep component logic on the server, reducing client bundle sizes and streamlining data access. It's a significant step forward in the realm of Server-Driven UI (SDUI).
