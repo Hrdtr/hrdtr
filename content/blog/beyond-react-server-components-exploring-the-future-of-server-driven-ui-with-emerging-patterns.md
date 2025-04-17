@@ -79,7 +79,7 @@ Astro has gained significant popularity, particularly for content-focused websit
     *   Built-in optimizations (asset handling, bundling).
     *   Seamless View Transitions integration.
 *   **Use Cases:** Blogs, marketing sites, documentation portals, portfolios, e-commerce product pages – anywhere static content is prevalent but sprinkles of interactivity are needed.
-*   **Code Snippet Idea (Conceptual Astro):**
+*   **Code Snippet (Conceptual Astro):**
 
     ```astro
     ---
@@ -106,8 +106,6 @@ Astro has gained significant popularity, particularly for content-focused websit
     </html>
     ```
 
-*   **Visual Suggestion:** A diagram showing a webpage layout with distinct sections marked as "Static HTML (Ocean)" and others marked as "Interactive Island (React/Vue/etc.)".
-
 *   **Source:** [Astro Documentation](https://docs.astro.build/)
 
 ### Qwik: The Promise of Resumability
@@ -121,7 +119,7 @@ Qwik takes a fundamentally different approach by aiming to eliminate hydration d
     *   Serialization: Component state and pointers to event handlers are embedded in the HTML.
     *   Qwik City: A meta-framework for routing, data loading, and middleware.
 *   **Use Cases:** Highly interactive applications where instant startup performance is paramount (e.g., complex dashboards, e-commerce checkouts, mobile-first experiences). Applications with large amounts of code where traditional hydration becomes a bottleneck.
-*   **Code Snippet Idea (Conceptual Qwik):**
+*   **Code Snippet (Conceptual Qwik):**
 
     ```typescript
     // src/components/counter/counter.tsx
@@ -147,8 +145,6 @@ Qwik takes a fundamentally different approach by aiming to eliminate hydration d
     });
     ```
 
-*   **Visual Suggestion:** A flowchart comparing the steps involved in traditional Hydration (Download JS -> Execute JS -> Attach Listeners) vs. Resumability (Download HTML -> Resume State -> Download Handler JS on Interaction).
-
 *   **Source:** [Qwik Documentation](https://qwik.builder.io/docs/)
 
 ### HTMX: Hypermedia Power-Up
@@ -161,7 +157,7 @@ HTMX enhances traditional server-rendered applications by adding dynamic behavio
     *   Dependency-Free: A single, small JavaScript file.
     *   Backend Agnostic: Works with any backend language or framework capable of rendering HTML fragments (Go, Python/Django, Ruby/Rails, PHP/Laravel, Node.js/Express, etc.).
 *   **Use Cases:** Adding dynamic updates to existing server-rendered applications without a full rewrite. Building interactive features like infinite scroll, active search, inline editing, or modal dialogs with minimal JavaScript. Prototyping quickly.
-*   **Code Snippet Idea (Conceptual HTMX):**
+*   **Code Snippet (Conceptual HTMX):**
 
     ```html
     <!-- Server renders this initially -->
@@ -187,13 +183,6 @@ HTMX enhances traditional server-rendered applications by adding dynamic behavio
     </ul>
     -->
     ```
-
-*   **Visual Suggestion:** A diagram illustrating the request/response flow:
-    1.  User clicks the button.
-    2.  HTMX sends GET request to `/latest-news`.
-    3.  Server processes request and returns an HTML fragment.
-    4.  HTMX receives the HTML fragment.
-    5.  HTMX replaces the content of `#news-section` with the received fragment.
 
 *   **Source:** [HTMX Documentation](https://htmx.org/docs/)
 
@@ -256,4 +245,3 @@ Each pattern comes with its own philosophy, strengths, and trade-offs regarding 
 *   **Qwik:** [Qwik Documentation](https://qwik.builder.io/docs/)
 *   **HTMX:** [HTMX Documentation](https://htmx.org/docs/)
 *   **View Transitions API:** [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)
-*   **Comparison Articles (Search Results):** *(You may need to perform searches like "Astro vs Qwik vs RSC" or "HTMX vs Alpine.js" to find up-to-date community comparisons and benchmarks)*
