@@ -36,7 +36,7 @@
     "@nuxt/image": "^1.10.0",
     "@nuxthub/core": "^0.8.24",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/seo": "3.0.2",
+    "@nuxtjs/seo": "3.0.3",
     "@nuxtjs/tailwindcss": "^6.13.2",
     "@replit/codemirror-vscode-keymap": "^6.0.2",
     "@tailwindcss/typography": "^0.5.16",
