@@ -72,6 +72,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/color-mode',
+    '@nuxtjs/plausible',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
   ],
@@ -149,5 +150,10 @@ export default defineNuxtConfig({
         ],
       },
     },
+  },
+
+  plausible: {
+    domain: 'hrdtr.dev',
+    apiHost: 'https://plausible.pvt.hrdtr.dev',
   },
 })
