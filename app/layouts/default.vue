@@ -138,6 +138,9 @@ const dark = computed({
 .prose p {
   @apply text-background-content/80;
 }
+.prose li {
+  @apply text-background-content/80;
+}
 .prose h1 > a,
 .prose h2 > a,
 .prose h3 > a,
